@@ -1,0 +1,188 @@
+{
+  "alerts": [
+    "GSC unavailable: Search Console API failed: HttpError"
+  ],
+  "base_url": "https://cvecararuma.rs",
+  "checks": {
+    "pages": [
+      {
+        "canonical": "https://cvecararuma.rs",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Cvećara Lotos Ruma za bukete, ruže, aranžmane i dostavu cveća u Rumi i Sremu. Narudžbina, termin i plaćanje potvrđuju se telefonom.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "Answer",
+          "BreadcrumbList",
+          "City",
+          "ContactPoint",
+          "FAQPage",
+          "Florist",
+          "GeoCoordinates",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ItemList",
+          "ListItem",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "Question",
+          "SearchAction",
+          "Service",
+          "SiteNavigationElement",
+          "WebPage",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/",
+        "status": 200,
+        "title": "Cvećara Ruma | Dostava cveća Ruma i Srem",
+        "url": "https://cvecararuma.rs/"
+      },
+      {
+        "canonical": "https://cvecararuma.rs/proizvodi",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Pregled buketa, ruža i aranžmana za dostavu za Ruma.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "BreadcrumbList",
+          "City",
+          "ContactPoint",
+          "Florist",
+          "GeoCoordinates",
+          "ItemList",
+          "ListItem",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/proizvodi",
+        "status": 200,
+        "title": "Proizvodi | Cvećara Ruma | Cvećara Lotos Ruma",
+        "url": "https://cvecararuma.rs/proizvodi"
+      },
+      {
+        "canonical": "https://cvecararuma.rs/kategorije",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Pregled kategorija proizvoda za dostavu za Ruma.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "City",
+          "ContactPoint",
+          "Florist",
+          "GeoCoordinates",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/kategorije",
+        "status": 200,
+        "title": "Kategorije cveća | Cvećara Ruma | Cvećara Lotos Ruma",
+        "url": "https://cvecararuma.rs/kategorije"
+      },
+      {
+        "canonical": "https://cvecararuma.rs/dostava",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Dostava cveća u Rumi i Sremu uz prethodnu potvrdu.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "City",
+          "ContactPoint",
+          "Florist",
+          "GeoCoordinates",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/dostava",
+        "status": 200,
+        "title": "Dostava cveća Ruma | Cvećara Lotos Ruma",
+        "url": "https://cvecararuma.rs/dostava"
+      },
+      {
+        "canonical": "https://cvecararuma.rs/kontakt",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Cvećara Lotos Ruma — buketi, ruže, aranžmani i dostava cveća.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "City",
+          "ContactPoint",
+          "Florist",
+          "GeoCoordinates",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/kontakt",
+        "status": 200,
+        "title": "Kontakt | Cvećara Ruma | Cvećara Lotos Ruma",
+        "url": "https://cvecararuma.rs/kontakt"
+      }
+    ],
+    "robots": {
+      "allows_home_googlebot": true,
+      "allows_sample_googlebot": {
+        "/": true,
+        "/dostava": true,
+        "/kategorije": true,
+        "/kontakt": true,
+        "/proizvodi": true
+      },
+      "status": 200,
+      "url": "https://cvecararuma.rs/robots.txt"
+    },
+    "sitemap": {
+      "is_sitemap_index": false,
+      "loc_count": 88,
+      "sample_urls": [
+        "https://cvecararuma.rs",
+        "https://cvecararuma.rs/cvecara-ruma",
+        "https://cvecararuma.rs/proizvodi",
+        "https://cvecararuma.rs/kategorije",
+        "https://cvecararuma.rs/prilike"
+      ],
+      "status": 200,
+      "url": "https://cvecararuma.rs/sitemap.xml"
+    }
+  },
+  "created_at": "2026-10-12T01:12:21+02:00",
+  "gsc_error": "Search Console API failed: HttpError",
+  "monitor_date": "2026-10-12",
+  "site_id": "ruma"
+}
