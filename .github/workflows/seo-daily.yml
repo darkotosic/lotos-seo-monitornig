@@ -1,0 +1,76 @@
+name: SEO Daily Monitoring
+
+on:
+  schedule:
+    # Daily at 06:17 UTC (08:17 Belgrade summer / 07:17 winter).
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-monitor-daily
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: python -m pip install -e .
+      - name: Write short-lived service account credentials
+        env:
+          SEO_GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.SEO_GSC_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/seo-gsc.json
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          value = os.environ.get('SEO_GSC_SERVICE_ACCOUNT_JSON', '')
+          if not value:
+              raise SystemExit('Missing SEO_GSC_SERVICE_ACCOUNT_JSON repository secret')
+          parsed = json.loads(value)
+          if parsed.get('type') != 'service_account':
+              raise SystemExit('Expected a Google service-account JSON key')
+          path = pathlib.Path(os.environ['GOOGLE_APPLICATION_CREDENTIALS'])
+          path.write_text(value, encoding='utf-8')
+          path.chmod(0o600)
+          PY
+      - name: Check GSC, HTTP, SEO and index status
+        id: monitor
+        continue-on-error: true
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/seo-gsc.json
+          TELEGRAM_BOT_TOKEN: ${{ secrets.SEO_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.SEO_TELEGRAM_CHAT_ID }}
+          SEO_DAILY_TELEGRAM_SUMMARY: 'false'
+        run: python -m seo_monitor run --config config/sites.yml --output data --reports reports
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-report-${{ github.run_number }}
+          path: |
+            reports/
+            data/
+          retention-days: 30
+      - name: Save monitoring history
+        if: always()
+        run: |
+          git config user.name 'seo-monitor[bot]'
+          git config user.email 'seo-monitor[bot]@users.noreply.github.com'
+          git add data/ reports/
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(seo): daily monitoring snapshot'
+            git push
+          fi
+      - name: Fail job when monitoring failed
+        if: steps.monitor.outcome == 'failure'
+        run: exit 1

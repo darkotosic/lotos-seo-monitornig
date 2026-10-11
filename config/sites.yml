@@ -1,0 +1,57 @@
+# Domain property example: sc-domain:cvecararuma.rs
+# URL-prefix property example: https://cvecararuma.rs/
+# Property MUST exactly match an existing Search Console property accessible to the service account.
+settings:
+  window_days: 28
+  reporting_lag_days: 3
+  request_timeout_seconds: 15
+  min_impressions_for_rank_alert: 20
+  rank_drop_alert_positions: 3
+
+sites:
+  - id: ruma
+    enabled: true
+    name: "Cvećara Lotos Ruma"
+    base_url: "https://cvecararuma.rs"
+    gsc_property: "sc-domain:cvecararuma.rs"
+    keywords:
+      - "cvecara ruma"
+      - "cvećara ruma"
+      - "cvecare ruma"
+      - "cvecara lotos ruma"
+      - "dostava cveca ruma"
+    check_paths:
+      - "/"
+      - "/proizvodi"
+      - "/kategorije"
+      - "/dostava"
+      - "/kontakt"
+    inspect_paths:
+      - "/"
+      - "/proizvodi"
+      - "/kategorije"
+
+  - id: indjija
+    enabled: true
+    name: "Cvećara Inđija — Lotos"
+    base_url: "https://cvecaraindjija.rs"
+    gsc_property: "sc-domain:cvecaraindjija.rs"
+    keywords:
+      - "cvecara indjija"
+      - "cvećara inđija"
+      - "cvecare indjija"
+      - "dostava cveca indjija"
+      - "buketi indjija"
+    check_paths:
+      - "/"
+      - "/kategorije"
+      - "/kategorije/pokloni-uz-cvece"
+      - "/prilike/slava"
+      - "/proizvodi/buket-uspomena"
+      - "/twitter-image"
+    inspect_paths:
+      - "/"
+      - "/kategorije"
+      - "/kategorije/pokloni-uz-cvece"
+      - "/prilike/slava"
+      - "/proizvodi/buket-uspomena"
