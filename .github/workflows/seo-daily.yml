@@ -50,7 +50,7 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/seo-gsc.json
           TELEGRAM_BOT_TOKEN: ${{ secrets.SEO_TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.SEO_TELEGRAM_CHAT_ID }}
-          SEO_DAILY_TELEGRAM_SUMMARY: 'false'
+          SEO_DAILY_TELEGRAM_SUMMARY: 'true'
         run: python -m seo_monitor run --config config/sites.yml --output data --reports reports
       - name: Upload reports
         if: always()
