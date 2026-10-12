@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 ﻿date,period_start,period_end,clicks,impressions,ctr_percent,average_position,alerts_count,gsc_status
 2026-10-12,2026-09-12,2026-10-09,148,3765,3.93,5.87,0,ok
+=======
+﻿date,period_start,period_end,clicks,impressions,ctr_percent,average_position,alerts_count,gsc_status
+2026-10-12,2026-09-12,2026-10-09,148,3765,3.93,5.87,0,ok
+>>>>>>> 1857b0f3720385cb5920d81288b50d9f5bdfdf05

@@ -1,6 +1,10 @@
 # SEO izveštaj — Cvećara Inđija — Lotos
 
+<<<<<<< HEAD
 Generisano: 2026-10-12T01:30:22+02:00  |  Domen: https://cvecaraindjija.rs
+=======
+Generisano: 2026-10-12T14:51:33+02:00  |  Domen: https://cvecaraindjija.rs
+>>>>>>> 1857b0f3720385cb5920d81288b50d9f5bdfdf05
 
 ## Google Search Console — Web pretraga
 Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
@@ -17,10 +21,17 @@ Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
 | Upit | Klikovi | Prikazi | CTR | Pozicija | Prethodna pozicija |
 |---|---:|---:|---:|---:|---:|
 | cvecara indjija | 5 | 48 | 10.4% | 10.3 | N/D |
+<<<<<<< HEAD
 | cvećara inđija | 0 | 0 | 0.0% | N/D | N/D |
 | cvecare indjija | 0 | 14 | 0.0% | 6.3 | N/D |
 | dostava cveca indjija | 0 | 0 | 0.0% | N/D | N/D |
 | buketi indjija | 0 | 0 | 0.0% | N/D | N/D |
+=======
+| cvećara inđija | 0 | 0 | 0.0% | 0.0 | N/D |
+| cvecare indjija | 0 | 14 | 0.0% | 6.3 | N/D |
+| dostava cveca indjija | 0 | 0 | 0.0% | 0.0 | N/D |
+| buketi indjija | 0 | 0 | 0.0% | 0.0 | N/D |
+>>>>>>> 1857b0f3720385cb5920d81288b50d9f5bdfdf05
 
 ## Najposećenije stranice
 
