@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 
 from seo_monitor.checks import collect_checks
 from seo_monitor.config import load_config
+from seo_monitor.cost_guard import CostGuard, QuotaExceeded, load_limits
 from seo_monitor.diagnostics import provider_error
 from seo_monitor.gsc import GoogleSearchConsole, collect_gsc
 from seo_monitor.notify import send_telegram
@@ -52,8 +53,11 @@ def _write_json(path: Path, data: dict) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Read-only multi-domain SEO monitoring")
-    parser.add_argument("command", nargs="?", default="run", choices=["run", "validate", "notify-test"])
+    parser.add_argument("command", nargs="?", default="run", choices=["run", "validate", "notify-test", "audit", "rebuild-db"])
     parser.add_argument("--config", default="config/sites.yml")
+    parser.add_argument("--limits", default="config/limits.yml")
+    parser.add_argument("--skip-pagespeed", action="store_true", help="Weekly crawl without PageSpeed calls")
+    parser.add_argument("--db", default="local/seo_history.db", help="Rebuildable local SQLite file")
     parser.add_argument("--output", default="data")
     parser.add_argument("--reports", default="reports")
     parser.add_argument("--site", help="Optional site ID (ruma, indjija, ...)")
@@ -65,10 +69,18 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     settings, sites = load_config(Path(args.config))
+    limits = load_limits(Path(args.limits))
+    if len(sites) > limits.maximum_sites:
+        parser.error("Enabled sites exceed the free-only site cap")
     if args.site:
         sites = [s for s in sites if s.id == args.site]
         if not sites:
             parser.error(f"Site ID not present or disabled: {args.site}")
+    if args.command == "rebuild-db":
+        from seo_monitor.storage import rebuild_sqlite
+        result = rebuild_sqlite(Path(args.output), Path(args.db))
+        print(f"SQLite built locally: {result}")
+        return 0
     if args.command == "validate":
         print(f"Configuration valid: {len(sites)} enabled domain(s): " + ", ".join(s.id for s in sites))
         return 0
@@ -80,6 +92,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if success else 2
 
     today = date.fromisoformat(args.date) if args.date else datetime.now(TZ).date()
+    if args.command == "audit":
+        from seo_monitor.audit_cli import run_weekly
+        return run_weekly(sites, limits, today, Path(args.output), Path(args.reports),
+                          skip_pagespeed=args.skip_pagespeed, notify=not args.no_notify)
     root, report_dir = Path(args.output), Path(args.reports)
     root.mkdir(parents=True, exist_ok=True)
     report_dir.mkdir(parents=True, exist_ok=True)
@@ -115,9 +131,12 @@ def main(argv: list[str] | None = None) -> int:
             any_error = True
         if api:
             try:
-                snap["gsc"] = collect_gsc(api, site, settings, today, inspect=not args.skip_inspection)
+                snap["gsc"] = collect_gsc(api, site, settings, today, inspect=not args.skip_inspection,
+                                          guard=CostGuard(limits))
             except Exception as exc:
                 snap["gsc_error"] = provider_error(exc, "Search Console API")
+                if isinstance(exc, QuotaExceeded):
+                    snap["gsc_error"] = "GSC free-call quota reached; skipped further requests"
                 print(f"[{site.id}] {snap['gsc_error']}", file=sys.stderr)
                 any_error = True
         elif not args.skip_gsc:

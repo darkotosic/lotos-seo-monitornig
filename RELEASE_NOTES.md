@@ -1,41 +1,24 @@
-# LOTOS SEO MONITOR v2.0.0 — release notes
+# LOTOS SEO INTELLIGENCE — v3.0.0 (Zero-Cost Edition)
 
-Datum: 12. oktobar 2026.
+## Nova funkcionalnost
 
-## Osnova i kompatibilnost
+- Hard limiti `config/limits.yml`, `seo_monitor/cost_guard.py` — samo free-only režim, fail-closed kvote.
+- Nedeljni bezbedni sitemap crawler sa zaštitom od cross-host i robots blokiranih putanja.
+- Detaljna provera HTML title/description/H1, canonical, unutrašnjih linkova, alt atributa i JSON-LD.
+- Read-only PageSpeed keyless mobile/desktop; 429/403/preteran odgovor ne aktivira druge servise.
+- Napredni GSC upiti, segmentacija po uređaju/zemlji, dodatni Google Images agregat kada je dostupan.
+- Heuristički SEO Opportunity Engine sa dokazima, bez automatskih izmena sajta.
+- Neobavezni read-only GA4 modul (nije zakazan niti aktiviran).
+- SQLite offline rebuild iz JSON istorije; baza ostaje izvan Git-a.
+- Novi `seo-weekly.yml` sa zasebnim tehničkim i Telegram izveštajem.
+- Novi dokumenti v3 o migraciji, nultom trošku, operacijama i testovima.
 
-Nadograđen je konkretan korisnikov ZIP `lotos-seo-monitornig-main.zip`, ne fiktivni novi projekat. Sačuvan je `config/sites.yml` za Rumu i Inđiju, HTML/CSV/Markdown/JSON report izlazi, postojeće dve Search Console Domain property konfiguracije, istorija JSON snapshotova i sva tri postojeća GitHub Secrets naziva.
+## Kompatibilnost
 
-## Implementirano
+- U potpunosti zadržani `sites.yml`, service-account, Telegram Secret nazivi, dnevni JSON/CSV, scheduler i watchdog v2.
+- Nema izmena Ruma/Inđija produkcionih sajtova, Render/Netlify env, baze porudžbina i checkout-a.
+- Ništa ne koristi Google Indexing API za e-commerce proizvode.
 
-1. Dnevni **Telegram Executive Digest** sa 28d Google KPI-jevima, poređenjem sa prethodnih 28d, najvažnijim upitima, pozicijama, indeksiranim URL uzorkom, HTTP odgovorima i upozorenjima.
-2. **Nedeljno poređenje** dva 7-dnevna perioda (dodatni finalizovani GSC pozivi); prikazuje se u dnevnoj poruci svakog ponedeljka i u Markdown izveštajima.
-3. Nedostajući/privatno filtrirani podaci više **ne prikazuju poziciju 0** nego `N/D`.
-4. Bezbedna GSC dijagnostika sa HTTP statusom i dozvoljenim Google reason-ima; bez prenošenja raw API grešaka, URL query stringova ili kredencijala u Git istoriju.
-5. Poboljšan **HTML dashboard**, sa upitima, indeksnim uzorkom, periodom i GSC ograničenjima; iz GSC polja se HTML-escape-uje sadržaj.
-6. CLI komande `validate`, `notify-test` i `--preview-telegram`; offline i live test procedure; testovi Telegram isporuke bez GSC.
-7. Atomski upis dnevnih JSON snapshotova i čitanje poslednjeg ispravnog snimka ako je noviji pokvaren.
-8. Informativna detekcija SSR H1 placeholdera (npr. „Učitavanje...“), bez lažnog fatal alarma.
-9. Detekcija praznog sitemap XML; konzervativne postojeće HTTP/canonical/robots zaštite ostaju.
-10. Samostalni **SEO Monitoring Watchdog** na GitHub Actions (`12:00 UTC`), koji proverava da li je dnevni run uspeo u poslednjih 27 sati i šalje Telegram alarm.
-11. Odvojeni **SEO Telegram Connection Test** workflow; proširen CI; brisanje privremenog Google JSON ključa iz runner-a posle merenja.
-12. Opsežna dokumentacija za GitHub Secrets, migraciju, bezbednost i operacije.
+## Verifikacija
 
-## Validacija u okruženju izrade
-
-- `python -m pytest -q` — 50 passed (offline unit/regresioni testovi, GSC/Telegram/GitHub HTTP pozivi su mockovani).
-- `python -m compileall -q seo_monitor` — uspešno.
-- `python -m seo_monitor validate` — oba postojeća domena ispravna.
-- `ruff check seo_monitor tests` — **nije lokalno izvršen** jer ruff nije instaliran u okruženju; automatski se izvršava na GitHub CI-u.
-
-## Potrebna produkciona verifikacija
-
-- GitHub **PR → CI** mora biti zelen pre merge-a.
-- Ručni `SEO Daily Monitoring` treba da vrati GSC=OK za oba domena i generiše pun dnevni Telegram izveštaj.
-- Pokreni **SEO Telegram Connection Test** i proveri poruku u Telegram kanalu.
-- Watchdog se može testirati ručno, ali normalno završava 0 samo ako postoji uspešan dnevni run u poslednjih 27 sati.
-- Potvrdi da `reports/overview.md` i `reports/telegram-preview.txt` prikazuju stvarne podatke; oni koji su u arhivi pre release-a pripadaju prethodnoj v1 instanci i namenjeni su očuvanju istorije.
-
-## Nema izmene
-
-Nema nikakvih izmena na `cvecararuma.rs`, `cvecaraindjija.rs`, Django/DRF, PostgreSQL, Render, Netlify, narudžbinama ili payment toku. Bot ne kreira lažne Google pretrage ni klikove.
+Pokrenuti lokalni testovi i sintaksne provere su dokumentovani u odgovoru pri isporuci; produkcioni GSC/Telegram/PageSpeed nakon deploy-a nisu testirani u ovom okruženju. GitHub CI radi Ruff lint.

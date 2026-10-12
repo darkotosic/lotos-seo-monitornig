@@ -1,4 +1,31 @@
-# LOTOS SEO MONITORING v2.0.0
+# LOTOS SEO INTELLIGENCE v3.0.0 — ZERO-COST EDITION
+
+> **v3 je nadogradnja postojećeg v2 projekta, a ne novi produkcioni sistem.** Postojeći Ruma/Inđija GSC i Telegram Secrets ostaju. Svi plaćeni cloud servisi su isključeni; raspolaganje GitHub besplatnom kvotom mora biti ograničeno na nivou naloga. Pogledaj [zero-cost policy](docs/ENTERPRISE_ZERO_COST_V3.md) i [migraciju v2→v3](docs/MIGRACIJA_V2_V3.md).
+
+## v3 — nove komande
+
+```bash
+python -m pip install -e '.[dev]'
+python -m pytest -q
+ruff check seo_monitor tests
+python -m seo_monitor validate --config config/sites.yml --limits config/limits.yml
+python -m seo_monitor run --skip-gsc --no-notify
+python -m seo_monitor audit --skip-pagespeed --no-notify
+python -m seo_monitor rebuild-db --output data --db local/seo_history.db
+```
+
+`audit` je stvarni, nedeljni HTTPS sitemap crawler sa kontrolom `robots.txt`, bez promene produkcionog koda. Izostavi `--skip-pagespeed` da aktiviraš ograničeni, besplatni PageSpeed (keyless) koji može vratiti N/D. Dnevni monitoring koristi postojeće GSC/Telegram tajne. Izveštaji nastaju u `reports/`, dnevna istorija ostaje u `data/{site}/`, a novi nedeljni rezultati u `data/audits/{site}/`.
+
+### Nova dokumentacija
+
+- [ZERO COST / ENTERPRISE V3](docs/ENTERPRISE_ZERO_COST_V3.md)
+- [MIGRACIJA V2 → V3](docs/MIGRACIJA_V2_V3.md)
+- [OPERATIONS V3](docs/OPERATIONS_V3.md)
+- [TEST MATRIX V3](docs/TEST_MATRIX_V3.md)
+- [RELEASE NOTES](RELEASE_NOTES.md)
+
+---
+
 
 **Enterprise-grade read-only SEO observability za Cvećaru Lotos** — zaseban Python repozitorijum za `cvecararuma.rs`, `cvecaraindjija.rs` i nove lokalne domene. **Nije bot za veštačke klikove**; ne menja prodajne sisteme i ne garantuje Google rangiranje.
 

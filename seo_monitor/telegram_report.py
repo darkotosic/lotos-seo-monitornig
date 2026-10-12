@@ -84,7 +84,7 @@ def build_daily_message(sites: list[Site], snapshots: dict[str, dict], today: da
                 lines.append("Upiti (prosečne pozicije):")
                 for keyword in valid_keywords:
                     kw_current, kw_previous = keyword["current"], keyword.get("previous")
-                    lines.append(f"- {keyword['query'][:72]}: {_fmt(kw_current, 'position')}"
+                    lines.append(f"- {keyword['query'].replace(chr(10), ' ').replace(chr(13), ' ')[:72]}: {_fmt(kw_current, 'position')}"
                                  f"{_delta(kw_current, kw_previous, 'position')}"
                                  f" · {kw_current['impressions']} prikaza")
             indexed, issues, unknown = _index_counts(snap)

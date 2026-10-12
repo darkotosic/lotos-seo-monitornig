@@ -1,0 +1,57 @@
+name: SEO Weekly Technical Audit
+
+on:
+  schedule:
+    # Mondays 08:43 UTC, well after the daily run.
+    - cron: '43 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-monitor-daily
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: python -m pip install -e .
+      - name: Validate zero-cost configuration
+        run: python -m seo_monitor validate --config config/sites.yml --limits config/limits.yml
+      - name: Weekly crawl, limited PageSpeed, recommendations
+        id: weekly
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.SEO_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.SEO_TELEGRAM_CHAT_ID }}
+        run: python -m seo_monitor audit --config config/sites.yml --limits config/limits.yml --output data --reports reports
+      - name: Upload audit artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-weekly-${{ github.run_number }}
+          path: |
+            reports/
+            data/audits/
+          retention-days: 5
+      - name: Save technical history
+        if: always()
+        run: |
+          git config user.name 'seo-monitor[bot]'
+          git config user.email 'seo-monitor[bot]@users.noreply.github.com'
+          git add data/audits/ reports/
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(seo): weekly zero-cost audit snapshot'
+            git push
+          fi
+      - name: Fail job on critical failure
+        if: steps.weekly.outcome == 'failure'
+        run: exit 1

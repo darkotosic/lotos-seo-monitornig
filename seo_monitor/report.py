@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from seo_monitor.config import Settings, Site
+from seo_monitor.opportunities import discover
 
 
 def safe(value: Any) -> str:
@@ -75,19 +76,10 @@ def assess(snapshot: dict, settings: Settings, previous_snapshot: dict | None = 
 
 
 def opportunities(snapshot: dict) -> list[str]:
-    """Conservative decision support; never a promise of a Google rank."""
-    output: list[str] = []
-    for kw in (snapshot.get("gsc") or {}).get("keywords", []):
-        c = kw.get("current")
-        if not c or c["impressions"] < 20 or c.get("position") is None:
-            continue
-        if 4 <= c["position"] <= 15:
-            output.append(f"Quick win candidate — '{kw['query']}' at avg. {c['position']:.1f} "
-                          f"({c['impressions']} impressions); review landing page relevance and intent")
-        elif c["position"] < 4 and c["ctr"] < 0.05:
-            output.append(f"CTR review — '{kw['query']}' position {c['position']:.1f} "
-                          f"with {c['ctr'] * 100:.1f}% CTR; inspect actual SERP and snippet")
-    return output[:15]
+    """Rank evidence-backed review candidates from tracked and discovered GSC queries."""
+    return [f"{item['priority']} — {item['target']} | pozicija {item['position']:.1f}, "
+            f"prikazi {item['impressions']}: {item['recommendation']}"
+            for item in discover(snapshot, minimum_impressions=20, limit=15)]
 
 
 def markdown(site: Site, snapshot: dict) -> str:
@@ -128,6 +120,25 @@ def markdown(site: Site, snapshot: dict) -> str:
     for row in gsc.get("top_pages", [])[:15]:
         lines.append(f"| {safe(row['url'])} | {metric(row,'clicks')} | "
                      f"{metric(row,'impressions')} | {metric(row,'position')} |")
+    if gsc.get("top_queries"):
+        lines += ["", "## Dodatni upiti iz Search Console (uzorak do 250)", "",
+                  "| Upit | Klikovi | Prikazi | Pozicija |", "|---|---:|---:|---:|"]
+        for row in gsc["top_queries"][:25]:
+            lines.append(f"| {safe(row['query'])} | {metric(row,'clicks')} | "
+                         f"{metric(row,'impressions')} | {metric(row,'position')} |")
+    if gsc.get("image_search_totals"):
+        lines += ["", "## Google Image Search", "",
+                  f"- Klikovi: {metric(gsc['image_search_totals'], 'clicks')}",
+                  f"- Prikazi: {metric(gsc['image_search_totals'], 'impressions')}",
+                  f"- Prosečna pozicija: {metric(gsc['image_search_totals'], 'position')}"]
+    for label, title, key in (("devices", "Uređaji", "device"),
+                               ("countries", "Zemlje", "country")):
+        if gsc.get(label):
+            lines += ["", f"## {title}", "", "| Segment | Klikovi | Prikazi | Pozicija |",
+                      "|---|---:|---:|---:|"]
+            for row in gsc[label][:12]:
+                lines.append(f"| {safe(row[key])} | {metric(row,'clicks')} | "
+                             f"{metric(row,'impressions')} | {metric(row,'position')} |")
     lines += ["", "## Search appearance", "", "| Tip | Klikovi | Prikazi |",
               "|---|---:|---:|"]
     for row in gsc.get("search_appearances", []):

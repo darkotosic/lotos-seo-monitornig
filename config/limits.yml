@@ -1,0 +1,12 @@
+# Zéro-cost policy. No cloud billing account, no paid fallback, hard local caps.
+version: 1
+cost_mode: free_only
+maximum_sites: 20
+maximum_daily_gsc_calls_per_site: 40
+maximum_daily_inspections_per_site: 8
+maximum_weekly_crawl_pages_per_site: 80
+maximum_weekly_sitemaps_per_site: 3
+maximum_weekly_pagespeed_calls_per_site: 4
+maximum_weekly_image_checks_per_site: 12
+maximum_http_response_bytes: 2000000
+weekly_audit_timeout_seconds: 25

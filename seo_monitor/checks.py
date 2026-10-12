@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 from urllib.robotparser import RobotFileParser
 
 import httpx
@@ -82,7 +82,22 @@ def _document(site: Site, response: httpx.Response, content: bytes) -> dict:
                 for child in value:
                     walk(child)
         walk(obj)
+    # Capture link/image metadata from the first HTML response only. No browser rendering.
+    host = urlsplit(site.base_url).hostname
+    internal_links = set()
+    for anchor in soup.find_all("a", href=True):
+        href = urljoin(final_url, anchor["href"])
+        parsed = urlsplit(href)
+        if (parsed.scheme == "https" and parsed.hostname == host and not parsed.port
+                and not parsed.query and not parsed.username and not parsed.password):
+            internal_links.add(parsed._replace(fragment="").geturl())
+    imgs = soup.find_all("img")
     result.update({
+        "internal_links": sorted(internal_links)[:300],
+        "img_count": len(imgs),
+        "images_without_alt": sum(1 for img in imgs if not img.has_attr("alt")),
+        "img_lazy_count": sum(1 for img in imgs if img.get("loading") == "lazy"),
+        "h1_count": len(soup.find_all("h1")),
         "title": (soup.title.get_text(" ", strip=True) if soup.title else "")[:200],
         "description": (desc.get("content", "") if desc else "")[:300],
         "h1": (h1.get_text(" ", strip=True) if h1 else "")[:200],
@@ -102,7 +117,6 @@ def _document(site: Site, response: httpx.Response, content: bytes) -> dict:
     elif urlsplit(str(result["canonical"])).hostname not in (None, urlsplit(site.base_url).hostname):
         result["warning"] = "Canonical points to a different domain"
     elif result["canonical"]:
-        from urllib.parse import urljoin
         canonical_url = urlsplit(urljoin(final_url, str(result["canonical"])))
         actual_url = urlsplit(final_url)
         if (canonical_url.hostname != actual_url.hostname

@@ -44,7 +44,7 @@ jobs:
           path.chmod(0o600)
           PY
       - name: Validate monitoring configuration
-        run: python -m seo_monitor validate --config config/sites.yml
+        run: python -m seo_monitor validate --config config/sites.yml --limits config/limits.yml
       - name: Check GSC, HTTP, SEO and index status
         id: monitor
         continue-on-error: true
@@ -53,7 +53,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.SEO_TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.SEO_TELEGRAM_CHAT_ID }}
           SEO_DAILY_TELEGRAM_SUMMARY: 'true'
-        run: python -m seo_monitor run --config config/sites.yml --output data --reports reports
+        run: python -m seo_monitor run --config config/sites.yml --limits config/limits.yml --output data --reports reports
       - name: Cleanup private credentials
         if: always()
         env:
@@ -67,7 +67,7 @@ jobs:
           path: |
             reports/
             data/
-          retention-days: 30
+          retention-days: 5
       - name: Save monitoring history
         if: always()
         run: |

@@ -1,10 +1,6 @@
 # SEO izveštaj — Cvećara Lotos Ruma
 
-<<<<<<< HEAD
 Generisano: 2026-10-12T01:29:55+02:00  |  Domen: https://cvecararuma.rs
-=======
-Generisano: 2026-10-12T14:51:04+02:00  |  Domen: https://cvecararuma.rs
->>>>>>> 1857b0f3720385cb5920d81288b50d9f5bdfdf05
 
 ## Google Search Console — Web pretraga
 Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
@@ -24,11 +20,7 @@ Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
 | cvećara ruma | 6 | 62 | 9.7% | 1.6 | 1.7 |
 | cvecare ruma | 6 | 83 | 7.2% | 2.0 | 1.6 |
 | cvecara lotos ruma | 8 | 23 | 34.8% | 1.0 | 1.0 |
-<<<<<<< HEAD
 | dostava cveca ruma | 0 | 0 | 0.0% | N/D | N/D |
-=======
-| dostava cveca ruma | 0 | 0 | 0.0% | 0.0 | 0.0 |
->>>>>>> 1857b0f3720385cb5920d81288b50d9f5bdfdf05
 
 ## Najposećenije stranice
 
