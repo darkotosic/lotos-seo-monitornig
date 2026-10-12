@@ -1,6 +1,6 @@
 # SEO izveštaj — Cvećara Lotos Ruma
 
-Generisano: 2026-10-12T01:29:55+02:00  |  Domen: https://cvecararuma.rs
+Generisano: 2026-10-12T14:51:04+02:00  |  Domen: https://cvecararuma.rs
 
 ## Google Search Console — Web pretraga
 Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)

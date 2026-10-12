@@ -1,6 +1,6 @@
 # SEO izveštaj — Cvećara Inđija — Lotos
 
-Generisano: 2026-10-12T01:30:22+02:00  |  Domen: https://cvecaraindjija.rs
+Generisano: 2026-10-12T14:51:33+02:00  |  Domen: https://cvecaraindjija.rs
 
 ## Google Search Console — Web pretraga
 Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
