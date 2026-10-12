@@ -1,10 +1,6 @@
 # SEO izveštaj — Cvećara Inđija — Lotos
 
-<<<<<<< HEAD
-Generisano: 2026-10-12T01:30:22+02:00  |  Domen: https://cvecaraindjija.rs
-=======
-Generisano: 2026-10-12T17:28:13+02:00  |  Domen: https://cvecaraindjija.rs
->>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360
+Generisano: 2026-10-12T21:26:46+02:00  |  Domen: https://cvecaraindjija.rs
 
 ## Google Search Console — Web pretraga
 Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
@@ -31,17 +27,10 @@ Period: 2026-10-03 do 2026-10-09
 | Upit | Klikovi | Prikazi | CTR | Pozicija | Prethodna pozicija |
 |---|---:|---:|---:|---:|---:|
 | cvecara indjija | 5 | 48 | 10.4% | 10.3 | N/D |
-<<<<<<< HEAD
-| cvećara inđija | 0 | 0 | 0.0% | N/D | N/D |
-| cvecare indjija | 0 | 14 | 0.0% | 6.3 | N/D |
-| dostava cveca indjija | 0 | 0 | 0.0% | N/D | N/D |
-| buketi indjija | 0 | 0 | 0.0% | N/D | N/D |
-=======
 | cvećara inđija | N/D | N/D | N/D | N/D | N/D |
 | cvecare indjija | 0 | 14 | 0.0% | 6.3 | N/D |
 | dostava cveca indjija | N/D | N/D | N/D | N/D | N/D |
 | buketi indjija | N/D | N/D | N/D | N/D | N/D |
->>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360
 
 ## Najposećenije stranice
 
@@ -62,6 +51,35 @@ Period: 2026-10-03 do 2026-10-09
 | https://cvecaraindjija.rs/prilike/rodjendan | 0 | 1 | 7.0 |
 | https://cvecaraindjija.rs/proizvodi/buket-baloni-i-cvece | 0 | 1 | 4.0 |
 | https://cvecaraindjija.rs/proizvodi/ljubavni-pastelni-buket | 0 | 1 | 9.0 |
+
+## Dodatni upiti iz Search Console (uzorak do 250)
+
+| Upit | Klikovi | Prikazi | Pozicija |
+|---|---:|---:|---:|
+| cvecara indjija | 5 | 48 | 10.3 |
+| cvecara indjija radno vreme | 0 | 3 | 5.0 |
+| cvecara near me | 0 | 1 | 3.0 |
+| cvecare indjija | 0 | 14 | 6.3 |
+
+## Google Image Search
+
+- Klikovi: 0
+- Prikazi: 11
+- Prosečna pozicija: 41.8
+
+## Uređaji
+
+| Segment | Klikovi | Prikazi | Pozicija |
+|---|---:|---:|---:|
+| MOBILE | 9 | 148 | 7.0 |
+| DESKTOP | 4 | 17 | 10.3 |
+
+## Zemlje
+
+| Segment | Klikovi | Prikazi | Pozicija |
+|---|---:|---:|---:|
+| srb | 13 | 164 | 7.4 |
+| deu | 0 | 1 | 9.0 |
 
 ## Search appearance
 
@@ -94,7 +112,8 @@ Period: 2026-10-03 do 2026-10-09
 
 ## SEO mogućnosti (heuristika, nije prognoza)
 
-- Quick win candidate — 'cvecara indjija' at avg. 10.3 (48 impressions); review landing page relevance and intent
+- P1 — https://cvecaraindjija.rs/ \| pozicija 7.5, prikazi 140: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P2 — cvecara indjija \| pozicija 10.3, prikazi 48: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 
 ## Upozorenja
 

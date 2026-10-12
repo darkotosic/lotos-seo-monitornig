@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-﻿query,clicks,impressions,ctr_percent,average_position,previous_position
-cvecara ruma,22,331,6.65,1.54,2.61
-cvećara ruma,6,62,9.68,1.58,1.69
-cvecare ruma,6,83,7.23,2.04,1.63
-cvecara lotos ruma,8,23,34.78,1.0,1.0
-dostava cveca ruma,0,0,0.0,0.0,0.0
-=======
 ﻿query,clicks,impressions,ctr_percent,average_position,previous_position
 cvecara ruma,22,331,6.65,1.54,2.61
 cvećara ruma,6,62,9.68,1.58,1.69
 cvecare ruma,6,83,7.23,2.04,1.63
 cvecara lotos ruma,8,23,34.78,1.0,1.0
 dostava cveca ruma,,,,,
->>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360

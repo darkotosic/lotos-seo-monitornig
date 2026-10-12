@@ -8,6 +8,52 @@
         "content_type": "text/html; charset=utf-8",
         "description": "Poručite bukete, ruže i cvetne aranžmane sa dostavom u Inđiji. Cvećara Lotos potvrđuje dostupnost, termin i cenu dostave pre izrade.",
         "h1": "Učitavanje...",
+        "h1_count": 2,
+        "images_without_alt": 0,
+        "img_count": 20,
+        "img_lazy_count": 19,
+        "internal_links": [
+          "https://cvecaraindjija.rs/",
+          "https://cvecaraindjija.rs/checkout",
+          "https://cvecaraindjija.rs/dostava",
+          "https://cvecaraindjija.rs/faq",
+          "https://cvecaraindjija.rs/kako-do-nas",
+          "https://cvecaraindjija.rs/kategorije",
+          "https://cvecaraindjija.rs/kategorije/buketi",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-godisnjicu",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-rodjendan",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-slavu",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-vencanje",
+          "https://cvecaraindjija.rs/kategorije/cvetne-kutije",
+          "https://cvecaraindjija.rs/kategorije/korpe-sa-cvecem",
+          "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece",
+          "https://cvecaraindjija.rs/kategorije/poslovni-pokloni",
+          "https://cvecaraindjija.rs/kategorije/ruze",
+          "https://cvecaraindjija.rs/kategorije/saucesce",
+          "https://cvecaraindjija.rs/kontakt",
+          "https://cvecaraindjija.rs/pretraga",
+          "https://cvecaraindjija.rs/prilike",
+          "https://cvecaraindjija.rs/proizvodi",
+          "https://cvecaraindjija.rs/proizvodi/aranzman-tihi-pozdrav",
+          "https://cvecaraindjija.rs/proizvodi/buket-hvala-za-saradnju",
+          "https://cvecaraindjija.rs/proizvodi/buket-saucesce-beli-mir",
+          "https://cvecaraindjija.rs/proizvodi/buket-sunce-za-rodjendan",
+          "https://cvecaraindjija.rs/proizvodi/buket-za-mamu-neznost",
+          "https://cvecaraindjija.rs/proizvodi/crvene-ruze-ljubav",
+          "https://cvecaraindjija.rs/proizvodi/elegantna-korpa-neznosti",
+          "https://cvecaraindjija.rs/proizvodi/godisnjica-classic-red",
+          "https://cvecaraindjija.rs/proizvodi/godisnjica-pastel-elegance",
+          "https://cvecaraindjija.rs/proizvodi/kraljevska-crvena-elegancija",
+          "https://cvecaraindjija.rs/proizvodi/kutija-srce-od-ruza",
+          "https://cvecaraindjija.rs/proizvodi/pastelna-bajka-buket",
+          "https://cvecaraindjija.rs/proizvodi/poslovni-buket-prestige",
+          "https://cvecaraindjija.rs/proizvodi/premium-25-ruza",
+          "https://cvecaraindjija.rs/proizvodi/premium-kutija-vecna-ljubav",
+          "https://cvecaraindjija.rs/proizvodi/rodjendanska-kutija-pastel-deluxe",
+          "https://cvecaraindjija.rs/proizvodi/rodjendanski-box-radost",
+          "https://cvecaraindjija.rs/proizvodi/romanticna-harmonija-buket",
+          "https://cvecaraindjija.rs/proizvodi/venac-premium-beli"
+        ],
         "jsonld_parse_errors": 0,
         "jsonld_types": [
           "Answer",
@@ -47,6 +93,33 @@
         "content_type": "text/html; charset=utf-8",
         "description": "Pregled kategorija proizvoda za dostavu za Inđija.",
         "h1": "Kategorije cveća",
+        "h1_count": 1,
+        "images_without_alt": 0,
+        "img_count": 0,
+        "img_lazy_count": 0,
+        "internal_links": [
+          "https://cvecaraindjija.rs/",
+          "https://cvecaraindjija.rs/checkout",
+          "https://cvecaraindjija.rs/dostava",
+          "https://cvecaraindjija.rs/faq",
+          "https://cvecaraindjija.rs/kako-do-nas",
+          "https://cvecaraindjija.rs/kategorije",
+          "https://cvecaraindjija.rs/kategorije/buketi",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-godisnjicu",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-rodjendan",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-slavu",
+          "https://cvecaraindjija.rs/kategorije/cvece-za-vencanje",
+          "https://cvecaraindjija.rs/kategorije/cvetne-kutije",
+          "https://cvecaraindjija.rs/kategorije/korpe-sa-cvecem",
+          "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece",
+          "https://cvecaraindjija.rs/kategorije/poslovni-pokloni",
+          "https://cvecaraindjija.rs/kategorije/ruze",
+          "https://cvecaraindjija.rs/kategorije/saucesce",
+          "https://cvecaraindjija.rs/kontakt",
+          "https://cvecaraindjija.rs/pretraga",
+          "https://cvecaraindjija.rs/prilike",
+          "https://cvecaraindjija.rs/proizvodi"
+        ],
         "jsonld_parse_errors": 0,
         "jsonld_types": [
           "City",
@@ -75,6 +148,24 @@
         "content_type": "text/html; charset=utf-8",
         "description": "Pokloni uz cveće - Cvećara Lotos Ruma.",
         "h1": "Učitavanje...",
+        "h1_count": 2,
+        "images_without_alt": 0,
+        "img_count": 1,
+        "img_lazy_count": 1,
+        "internal_links": [
+          "https://cvecaraindjija.rs/",
+          "https://cvecaraindjija.rs/checkout",
+          "https://cvecaraindjija.rs/dostava",
+          "https://cvecaraindjija.rs/faq",
+          "https://cvecaraindjija.rs/kako-do-nas",
+          "https://cvecaraindjija.rs/kategorije",
+          "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece",
+          "https://cvecaraindjija.rs/kontakt",
+          "https://cvecaraindjija.rs/pretraga",
+          "https://cvecaraindjija.rs/prilike",
+          "https://cvecaraindjija.rs/proizvodi",
+          "https://cvecaraindjija.rs/proizvodi/buket-baloni-i-cvece"
+        ],
         "jsonld_parse_errors": 0,
         "jsonld_types": [
           "BreadcrumbList",
@@ -107,6 +198,46 @@
         "content_type": "text/html; charset=utf-8",
         "description": "Buketi i aranžmani za izabranu priliku uz dostavu u Rumi.",
         "h1": "Učitavanje...",
+        "h1_count": 2,
+        "images_without_alt": 0,
+        "img_count": 23,
+        "img_lazy_count": 23,
+        "internal_links": [
+          "https://cvecaraindjija.rs/",
+          "https://cvecaraindjija.rs/checkout",
+          "https://cvecaraindjija.rs/dostava",
+          "https://cvecaraindjija.rs/faq",
+          "https://cvecaraindjija.rs/kako-do-nas",
+          "https://cvecaraindjija.rs/kategorije",
+          "https://cvecaraindjija.rs/kontakt",
+          "https://cvecaraindjija.rs/pretraga",
+          "https://cvecaraindjija.rs/prilike",
+          "https://cvecaraindjija.rs/prilike/slava",
+          "https://cvecaraindjija.rs/proizvodi",
+          "https://cvecaraindjija.rs/proizvodi/buket-baloni-i-cvece",
+          "https://cvecaraindjija.rs/proizvodi/buket-bela-godisnjica",
+          "https://cvecaraindjija.rs/proizvodi/buket-deset-godina-ljubavi",
+          "https://cvecaraindjija.rs/proizvodi/buket-hvala-za-saradnju",
+          "https://cvecaraindjija.rs/proizvodi/buket-za-drugaricu-smile",
+          "https://cvecaraindjija.rs/proizvodi/buket-za-mamu-neznost",
+          "https://cvecaraindjija.rs/proizvodi/buket-zajednicki-trenutak",
+          "https://cvecaraindjija.rs/proizvodi/buket-zlatni-jubilej",
+          "https://cvecaraindjija.rs/proizvodi/elegantan-beli-rodjendanski-buket",
+          "https://cvecaraindjija.rs/proizvodi/godisnjica-classic-red",
+          "https://cvecaraindjija.rs/proizvodi/godisnjica-pastel-elegance",
+          "https://cvecaraindjija.rs/proizvodi/kraljevska-crvena-elegancija",
+          "https://cvecaraindjija.rs/proizvodi/kutija-srce-od-ruza",
+          "https://cvecaraindjija.rs/proizvodi/ljubavni-pastelni-buket",
+          "https://cvecaraindjija.rs/proizvodi/mini-godisnjica",
+          "https://cvecaraindjija.rs/proizvodi/mini-love-buket",
+          "https://cvecaraindjija.rs/proizvodi/mini-rodjendanski-buket",
+          "https://cvecaraindjija.rs/proizvodi/orhideja-i-ruze-premium",
+          "https://cvecaraindjija.rs/proizvodi/pastelna-bajka-buket",
+          "https://cvecaraindjija.rs/proizvodi/premium-25-ruza",
+          "https://cvecaraindjija.rs/proizvodi/rodjendanska-korpa-sreca",
+          "https://cvecaraindjija.rs/proizvodi/romanticna-harmonija-buket",
+          "https://cvecaraindjija.rs/proizvodi/rusticna-godisnjica"
+        ],
         "jsonld_parse_errors": 0,
         "jsonld_types": [
           "BreadcrumbList",
@@ -139,6 +270,23 @@
         "content_type": "text/html; charset=utf-8",
         "description": "Buket Uspomena za Rumu i okolinu. Online naručivanje preko Cvećare Lotos Ruma, potvrda dostupnosti, termina dostave i instrukcija za plaćanje nakon slanja narudžbine.",
         "h1": "Učitavanje...",
+        "h1_count": 2,
+        "images_without_alt": 0,
+        "img_count": 1,
+        "img_lazy_count": 0,
+        "internal_links": [
+          "https://cvecaraindjija.rs/",
+          "https://cvecaraindjija.rs/checkout",
+          "https://cvecaraindjija.rs/dostava",
+          "https://cvecaraindjija.rs/faq",
+          "https://cvecaraindjija.rs/kako-do-nas",
+          "https://cvecaraindjija.rs/kategorije",
+          "https://cvecaraindjija.rs/kontakt",
+          "https://cvecaraindjija.rs/pretraga",
+          "https://cvecaraindjija.rs/prilike",
+          "https://cvecaraindjija.rs/proizvodi",
+          "https://cvecaraindjija.rs/proizvodi/buket-uspomena"
+        ],
         "jsonld_parse_errors": 0,
         "jsonld_types": [
           "Answer",
@@ -203,15 +351,49 @@
       "url": "https://cvecaraindjija.rs/sitemap.xml"
     }
   },
-<<<<<<< HEAD
-  "created_at": "2026-10-12T01:30:22+02:00",
-=======
-  "created_at": "2026-10-12T17:28:13+02:00",
->>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360
+  "created_at": "2026-10-12T21:26:46+02:00",
   "gsc": {
+    "countries": [
+      {
+        "clicks": 13,
+        "country": "srb",
+        "ctr": 0.07927,
+        "impressions": 164,
+        "position": 7.37
+      },
+      {
+        "clicks": 0,
+        "country": "deu",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 9.0
+      }
+    ],
     "current_window": {
       "end": "2026-10-09",
       "start": "2026-09-12"
+    },
+    "devices": [
+      {
+        "clicks": 9,
+        "ctr": 0.06081,
+        "device": "MOBILE",
+        "impressions": 148,
+        "position": 7.04
+      },
+      {
+        "clicks": 4,
+        "ctr": 0.23529,
+        "device": "DESKTOP",
+        "impressions": 17,
+        "position": 10.29
+      }
+    ],
+    "image_search_totals": {
+      "clicks": 0,
+      "ctr": 0.0,
+      "impressions": 11,
+      "position": 41.82
     },
     "inspections": [
       {
@@ -460,6 +642,36 @@
         "impressions": 1,
         "position": 10.0,
         "url": "https://cvecaraindjija.rs/proizvodi/rodjendanska-kutija-pastel-deluxe"
+      }
+    ],
+    "top_queries": [
+      {
+        "clicks": 5,
+        "ctr": 0.10417,
+        "impressions": 48,
+        "position": 10.35,
+        "query": "cvecara indjija"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 5.0,
+        "query": "cvecara indjija radno vreme"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0,
+        "query": "cvecara near me"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 14,
+        "position": 6.29,
+        "query": "cvecare indjija"
       }
     ],
     "totals": {
