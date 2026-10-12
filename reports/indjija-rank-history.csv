@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 ﻿date,query,clicks,impressions,ctr_percent,average_position
 2026-10-12,cvecara indjija,5,48,10.42,10.35
 2026-10-12,cvećara inđija,0,0,0.0,0.0
 2026-10-12,cvecare indjija,0,14,0.0,6.29
 2026-10-12,dostava cveca indjija,0,0,0.0,0.0
 2026-10-12,buketi indjija,0,0,0.0,0.0
+=======
+﻿date,query,clicks,impressions,ctr_percent,average_position
+2026-10-12,cvecara indjija,5,48,10.42,10.35
+2026-10-12,cvećara inđija,,,,
+2026-10-12,cvecare indjija,0,14,0.0,6.29
+2026-10-12,dostava cveca indjija,,,,
+2026-10-12,buketi indjija,,,,
+>>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360

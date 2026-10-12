@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 ﻿query,clicks,impressions,ctr_percent,average_position,previous_position
 cvecara indjija,5,48,10.42,10.35,
 cvećara inđija,0,0,0.0,0.0,
 cvecare indjija,0,14,0.0,6.29,
 dostava cveca indjija,0,0,0.0,0.0,
 buketi indjija,0,0,0.0,0.0,
+=======
+﻿query,clicks,impressions,ctr_percent,average_position,previous_position
+cvecara indjija,5,48,10.42,10.35,
+cvećara inđija,,,,,
+cvecare indjija,0,14,0.0,6.29,
+dostava cveca indjija,,,,,
+buketi indjija,,,,,
+>>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360

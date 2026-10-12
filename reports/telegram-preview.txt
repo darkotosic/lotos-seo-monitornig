@@ -13,6 +13,9 @@ Upiti (prosečne pozicije):
 - cvećara ruma: 1.6 (bolje 0.1) · 62 prikaza
 URL Inspection uzorak: 3 indeksirano, 0 problem, 0 nepoznato
 HTTP: 5/5 odgovora 200
+Nedeljni pregled (7d naspram prethodnih 7d):
+- Klikovi: 32 (+28%)
+- Prikazi: 852 (-9%)
 
 Cvećara Inđija — Lotos | https://cvecaraindjija.rs
 Period: 2026-09-12 — 2026-10-09
@@ -25,6 +28,9 @@ Upiti (prosečne pozicije):
 - cvecare indjija: 6.3 · 14 prikaza
 URL Inspection uzorak: 5 indeksirano, 0 problem, 0 nepoznato
 HTTP: 6/6 odgovora 200
+Nedeljni pregled (7d naspram prethodnih 7d):
+- Klikovi: 9 (+125%)
+- Prikazi: 111 (+106%)
 
 Upozorenja: 0
 Bez aktivnih upozorenja.

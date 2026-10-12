@@ -1,6 +1,10 @@
 # SEO izveštaj — Cvećara Lotos Ruma
 
+<<<<<<< HEAD
 Generisano: 2026-10-12T01:29:55+02:00  |  Domen: https://cvecararuma.rs
+=======
+Generisano: 2026-10-12T17:27:48+02:00  |  Domen: https://cvecararuma.rs
+>>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360
 
 ## Google Search Console — Web pretraga
 Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
@@ -12,6 +16,16 @@ Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
 | CTR | 3.9% | 4.1% |
 | Prosečna pozicija | 5.9 | 6.1 |
 
+## Nedeljno poređenje — 7 + 7 dana
+
+Period: 2026-10-03 do 2026-10-09
+
+| Pokazatelj | Poslednjih 7 dana | Prethodnih 7 dana |
+|---|---:|---:|
+| Klikovi | 32 | 25 |
+| Prikazi | 852 | 936 |
+| Pozicija | 6.3 | 5.9 |
+
 ## Ključne reči
 
 | Upit | Klikovi | Prikazi | CTR | Pozicija | Prethodna pozicija |
@@ -20,7 +34,11 @@ Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
 | cvećara ruma | 6 | 62 | 9.7% | 1.6 | 1.7 |
 | cvecare ruma | 6 | 83 | 7.2% | 2.0 | 1.6 |
 | cvecara lotos ruma | 8 | 23 | 34.8% | 1.0 | 1.0 |
+<<<<<<< HEAD
 | dostava cveca ruma | 0 | 0 | 0.0% | N/D | N/D |
+=======
+| dostava cveca ruma | N/D | N/D | N/D | N/D | N/D |
+>>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360
 
 ## Najposećenije stranice
 
@@ -60,11 +78,11 @@ Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
 
 | URL | HTTP | SEO problem |
 |---|---:|---|
-| https://cvecararuma.rs/ | 200 | — |
-| https://cvecararuma.rs/proizvodi | 200 | — |
-| https://cvecararuma.rs/kategorije | 200 | — |
-| https://cvecararuma.rs/dostava | 200 | — |
-| https://cvecararuma.rs/kontakt | 200 | — |
+| https://cvecararuma.rs/ | 200 | H1 u početnom HTML-u je placeholder |
+| https://cvecararuma.rs/proizvodi | 200 | H1 u početnom HTML-u je placeholder |
+| https://cvecararuma.rs/kategorije | 200 | H1 u početnom HTML-u je placeholder |
+| https://cvecararuma.rs/dostava | 200 | H1 u početnom HTML-u je placeholder |
+| https://cvecararuma.rs/kontakt | 200 | H1 u početnom HTML-u je placeholder |
 - **sitemap:** HTTP 200; bez uočenih HTTP problema
 - **robots:** HTTP 200; bez uočenih HTTP problema
 

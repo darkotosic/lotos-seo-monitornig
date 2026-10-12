@@ -37,6 +37,7 @@
         ],
         "noindex": false,
         "path": "/",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Cvećara Inđija | Dostava cveća i buketa – Lotos",
         "url": "https://cvecaraindjija.rs/"
@@ -64,6 +65,7 @@
         ],
         "noindex": false,
         "path": "/kategorije",
+        "ssr_h1_placeholder": false,
         "status": 200,
         "title": "Kategorije cveća | Cvećara Inđija | Cvećara Inđija | Lotos",
         "url": "https://cvecaraindjija.rs/kategorije"
@@ -95,6 +97,7 @@
         ],
         "noindex": false,
         "path": "/kategorije/pokloni-uz-cvece",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Pokloni uz cveće | Cvećara Inđija | Lotos",
         "url": "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece"
@@ -126,6 +129,7 @@
         ],
         "noindex": false,
         "path": "/prilike/slava",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Slava | Cvećara Lotos Ruma | Cvećara Inđija | Lotos",
         "url": "https://cvecaraindjija.rs/prilike/slava"
@@ -160,6 +164,7 @@
         ],
         "noindex": false,
         "path": "/proizvodi/buket-uspomena",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Buket Uspomena | Cvećara Lotos Ruma | Cvećara Inđija | Lotos",
         "url": "https://cvecaraindjija.rs/proizvodi/buket-uspomena"
@@ -198,7 +203,11 @@
       "url": "https://cvecaraindjija.rs/sitemap.xml"
     }
   },
+<<<<<<< HEAD
   "created_at": "2026-10-12T01:30:22+02:00",
+=======
+  "created_at": "2026-10-12T17:28:13+02:00",
+>>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360
   "gsc": {
     "current_window": {
       "end": "2026-10-09",
@@ -286,12 +295,7 @@
         "query": "cvecara indjija"
       },
       {
-        "current": {
-          "clicks": 0,
-          "ctr": 0.0,
-          "impressions": 0,
-          "position": 0.0
-        },
+        "current": null,
         "previous": null,
         "query": "cvećara inđija"
       },
@@ -306,27 +310,23 @@
         "query": "cvecare indjija"
       },
       {
-        "current": {
-          "clicks": 0,
-          "ctr": 0.0,
-          "impressions": 0,
-          "position": 0.0
-        },
+        "current": null,
         "previous": null,
         "query": "dostava cveca indjija"
       },
       {
-        "current": {
-          "clicks": 0,
-          "ctr": 0.0,
-          "impressions": 0,
-          "position": 0.0
-        },
+        "current": null,
         "previous": null,
         "query": "buketi indjija"
       }
     ],
     "previous_totals": null,
+    "previous_weekly_totals": {
+      "clicks": 4,
+      "ctr": 0.07407,
+      "impressions": 54,
+      "position": 8.17
+    },
     "previous_window": {
       "end": "2026-09-11",
       "start": "2026-08-15"
@@ -467,8 +467,19 @@
       "ctr": 0.07879,
       "impressions": 165,
       "position": 7.38
+    },
+    "weekly_totals": {
+      "clicks": 9,
+      "ctr": 0.08108,
+      "impressions": 111,
+      "position": 6.99
+    },
+    "weekly_window": {
+      "end": "2026-10-09",
+      "start": "2026-10-03"
     }
   },
   "monitor_date": "2026-10-12",
+  "schema_version": 2,
   "site_id": "indjija"
 }

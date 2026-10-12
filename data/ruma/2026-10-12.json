@@ -37,6 +37,7 @@
         ],
         "noindex": false,
         "path": "/",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Cvećara Ruma | Dostava cveća Ruma i Srem",
         "url": "https://cvecararuma.rs/"
@@ -67,6 +68,7 @@
         ],
         "noindex": false,
         "path": "/proizvodi",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Proizvodi | Cvećara Ruma | Cvećara Lotos Ruma",
         "url": "https://cvecararuma.rs/proizvodi"
@@ -94,6 +96,7 @@
         ],
         "noindex": false,
         "path": "/kategorije",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Kategorije cveća | Cvećara Ruma | Cvećara Lotos Ruma",
         "url": "https://cvecararuma.rs/kategorije"
@@ -121,6 +124,7 @@
         ],
         "noindex": false,
         "path": "/dostava",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Dostava cveća Ruma | Cvećara Lotos Ruma",
         "url": "https://cvecararuma.rs/dostava"
@@ -148,6 +152,7 @@
         ],
         "noindex": false,
         "path": "/kontakt",
+        "ssr_h1_placeholder": true,
         "status": 200,
         "title": "Kontakt | Cvećara Ruma | Cvećara Lotos Ruma",
         "url": "https://cvecararuma.rs/kontakt"
@@ -179,7 +184,11 @@
       "url": "https://cvecararuma.rs/sitemap.xml"
     }
   },
+<<<<<<< HEAD
   "created_at": "2026-10-12T01:29:55+02:00",
+=======
+  "created_at": "2026-10-12T17:27:48+02:00",
+>>>>>>> a10e1979e1051400ca961ef809e61b9caf41a360
   "gsc": {
     "current_window": {
       "end": "2026-10-09",
@@ -285,18 +294,8 @@
         "query": "cvecara lotos ruma"
       },
       {
-        "current": {
-          "clicks": 0,
-          "ctr": 0.0,
-          "impressions": 0,
-          "position": 0.0
-        },
-        "previous": {
-          "clicks": 0,
-          "ctr": 0.0,
-          "impressions": 0,
-          "position": 0.0
-        },
+        "current": null,
+        "previous": null,
         "query": "dostava cveca ruma"
       }
     ],
@@ -305,6 +304,12 @@
       "ctr": 0.04076,
       "impressions": 3263,
       "position": 6.09
+    },
+    "previous_weekly_totals": {
+      "clicks": 25,
+      "ctr": 0.02671,
+      "impressions": 936,
+      "position": 5.91
     },
     "previous_window": {
       "end": "2026-09-11",
@@ -733,8 +738,19 @@
       "ctr": 0.03931,
       "impressions": 3765,
       "position": 5.87
+    },
+    "weekly_totals": {
+      "clicks": 32,
+      "ctr": 0.03756,
+      "impressions": 852,
+      "position": 6.31
+    },
+    "weekly_window": {
+      "end": "2026-10-09",
+      "start": "2026-10-03"
     }
   },
   "monitor_date": "2026-10-12",
+  "schema_version": 2,
   "site_id": "ruma"
 }
