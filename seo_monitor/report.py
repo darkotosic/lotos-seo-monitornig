@@ -24,6 +24,8 @@ def metric(value: dict | None, name: str) -> str:
     if name == "ctr":
         return f"{100 * v:.1f}%"
     if name == "position":
+        if value.get("impressions", 0) == 0:
+            return "N/D"
         return f"{v:.1f}"
     return str(v)
 
@@ -52,7 +54,8 @@ def assess(snapshot: dict, settings: Settings, previous_snapshot: dict | None = 
         if not current or not previous:
             continue  # Privacy-filtered, new keywords, or no measured impressions.
         if (current["impressions"] < settings.min_impressions_for_rank_alert
-                or previous["impressions"] < settings.min_impressions_for_rank_alert):
+                or previous["impressions"] < settings.min_impressions_for_rank_alert
+                or current.get("position") is None or previous.get("position") is None):
             continue
         delta = current["position"] - previous["position"]
         if delta >= settings.rank_drop_alert_positions:
@@ -76,7 +79,7 @@ def opportunities(snapshot: dict) -> list[str]:
     output: list[str] = []
     for kw in (snapshot.get("gsc") or {}).get("keywords", []):
         c = kw.get("current")
-        if not c or c["impressions"] < 20:
+        if not c or c["impressions"] < 20 or c.get("position") is None:
             continue
         if 4 <= c["position"] <= 15:
             output.append(f"Quick win candidate — '{kw['query']}' at avg. {c['position']:.1f} "
@@ -104,6 +107,16 @@ def markdown(site: Site, snapshot: dict) -> str:
     ]
     for name, label in (("clicks", "Klikovi"), ("impressions", "Prikazi"), ("ctr", "CTR"), ("position", "Prosečna pozicija")):
         lines.append(f"| {label} | {metric(totals, name)} | {metric(previous_totals, name)} |")
+    if gsc.get("weekly_window"):
+        week = gsc.get("weekly_totals")
+        previous_week = gsc.get("previous_weekly_totals")
+        lines += ["", "## Nedeljno poređenje — 7 + 7 dana", "",
+                  f"Period: {gsc['weekly_window'].get('start')} do {gsc['weekly_window'].get('end')}", "",
+                  "| Pokazatelj | Poslednjih 7 dana | Prethodnih 7 dana |",
+                  "|---|---:|---:|",
+                  f"| Klikovi | {metric(week, 'clicks')} | {metric(previous_week, 'clicks')} |",
+                  f"| Prikazi | {metric(week, 'impressions')} | {metric(previous_week, 'impressions')} |",
+                  f"| Pozicija | {metric(week, 'position')} | {metric(previous_week, 'position')} |"]
     lines += ["", "## Ključne reči", "", "| Upit | Klikovi | Prikazi | CTR | Pozicija | Prethodna pozicija |",
               "|---|---:|---:|---:|---:|---:|"]
     for kw in gsc.get("keywords", []):
@@ -128,7 +141,7 @@ def markdown(site: Site, snapshot: dict) -> str:
               "|---|---:|---|"]
     for page in snapshot.get("checks", {}).get("pages", []):
         lines.append(f"| {safe(page['url'])} | {page.get('status','N/D')} | "
-                     f"{safe(page.get('error') or page.get('warning') or '—')} |")
+                     f"{safe(page.get('error') or page.get('warning') or ('H1 u početnom HTML-u je placeholder' if page.get('ssr_h1_placeholder') else '—'))} |")
     for kind in ("sitemap", "robots"):
         item = snapshot.get("checks", {}).get(kind, {})
         lines.append(f"- **{kind}:** HTTP {item.get('status','N/D')}; "
@@ -213,24 +226,68 @@ def overview(sites: list[Site], snapshots: dict[str, dict]) -> str:
 
 
 def dashboard(sites: list[Site], snapshots: dict[str, dict]) -> str:
+    """Static accessible dashboard, with escaped untrusted GSC strings."""
     cards = []
     for site in sites:
         snap = snapshots.get(site.id, {})
-        totals = (snap.get("gsc") or {}).get("totals")
+        gsc = snap.get("gsc") or {}
+        current, previous = gsc.get("totals"), gsc.get("previous_totals")
         link = escape(site.base_url, quote=True)
         alerts = len(snap.get("alerts", []))
-        cards.append(f'''<article><h2><a href="{link}" rel="noopener noreferrer">{escape(site.name)}</a></h2>
-<p class="domain">{link}</p><div class="stats"><div><b>{metric(totals,'clicks')}</b><span>Klikovi</span></div>
-<div><b>{metric(totals,'impressions')}</b><span>Prikazi</span></div>
-<div><b>{metric(totals,'ctr')}</b><span>CTR</span></div>
-<div><b>{metric(totals,'position')}</b><span>Pozicija</span></div></div>
-<p class="{'bad' if alerts else 'good'}">{alerts} upozorenja</p>
-<p><a href="{escape(site.id)}-latest.md">Detaljan izveštaj</a> · <a href="{escape(site.id)}-keywords.csv">Ključne reči</a> · <a href="{escape(site.id)}-history.csv">Istorija</a> · <a href="{escape(site.id)}-rank-history.csv">Pozicije</a></p></article>''')
-    return '''<!doctype html><html lang="sr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lotos SEO Monitoring</title><style>body{font:16px system-ui;background:#f8fafc;color:#1f2937;margin:0 auto;padding:28px;max-width:1100px}
-h1{font-size:1.8rem}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-article{background:white;border:1px solid #e5e7eb;border-radius:14px;padding:22px}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:15px}.stats div{display:flex;flex-direction:column}
-.stats b{font-size:1.7rem}.stats span,.domain{color:#64748b;font-size:.85rem}
-a{color:#126b4a}.bad{color:#b45309}.good{color:#166534}</style></head><body>
-<h1>Lotos SEO Monitoring</h1><p>Zvanični Search Console podaci i tehničke provere · nije live Google ranking.</p><main>''' + "\n".join(cards) + "</main></body></html>"
+        keys = [item for item in gsc.get("keywords", [])
+                if item.get("current") and item["current"].get("impressions", 0) > 0]
+        keys.sort(key=lambda item: -item["current"]["impressions"])
+        key_rows = "".join(
+            f"<tr><th scope='row'>{escape(str(k['query']))}</th>"
+            f"<td>{metric(k['current'], 'position')}</td>"
+            f"<td>{metric(k['current'], 'impressions')}</td></tr>"
+            for k in keys[:5]
+        ) or "<tr><td colspan='3'>Nema dovoljno podataka za praćene upite</td></tr>"
+        checks = (snap.get("checks") or {}).get("pages") or []
+        healthy = sum(1 for page in checks if page.get("status") == 200 and not page.get("error"))
+        inspections = gsc.get("inspections", [])
+        indexed = sum(1 for row in inspections if row.get("verdict") == "PASS")
+        index_label = f"{indexed}/{len(inspections)} PASS (uzorak)" if inspections else "N/D"
+        period = gsc.get("current_window") or {}
+        period_label = (f"{escape(str(period['start']))} — {escape(str(period['end']))}"
+                        if period.get("start") and period.get("end") else "GSC nije dostupan")
+        linkid = escape(site.id, quote=True)
+        cards.append(f"""<article><h2><a href="{link}" rel="noopener noreferrer">{escape(site.name)}</a></h2>
+<p class="domain">{link}</p><p class="period">GSC: {period_label}</p>
+<div class="stats"><div><b>{metric(current,'clicks')}</b><span>Klikovi / 28d</span></div>
+<div><b>{metric(current,'impressions')}</b><span>Prikazi / 28d</span></div>
+<div><b>{metric(current,'ctr')}</b><span>CTR / 28d</span></div>
+<div><b>{metric(current,'position')}</b><span>Prosečna pozicija / 28d</span></div></div>
+<p class="detail">Prethodnih 28d: {metric(previous, 'clicks')} klikova / {metric(previous, 'impressions')} prikaza</p>
+<p class="detail">HTTP 200: {healthy}/{len(checks)} · Google indeks: {index_label}</p>
+<p class="{'bad' if alerts else 'good'}">{'Upozorenja: ' + str(alerts) if alerts else 'Nema aktivnih upozorenja'}</p>
+<table><caption>Glavne praćene ključne reči</caption><thead><tr><th>Upit</th><th>Pozicija</th><th>Prikazi</th></tr></thead>
+<tbody>{key_rows}</tbody></table>
+<p class="links"><a href="{linkid}-latest.md">Izveštaj</a> ·
+<a href="{linkid}-keywords.csv">Upiti CSV</a> ·
+<a href="{linkid}-history.csv">Istorija</a> ·
+<a href="{linkid}-rank-history.csv">Pozicije</a></p></article>""")
+    head = """<!doctype html><html lang="sr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Lotos SEO Monitoring</title><style>
+:root{color-scheme:light;font-family:system-ui,sans-serif}*{box-sizing:border-box}
+body{background:#f5f8f7;color:#1d2930;margin:auto;padding:24px;max-width:1320px}
+h1{font-size:clamp(1.5rem,3vw,2.2rem)}p{line-height:1.5}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:18px}
+article{background:#fff;border:1px solid #d7e2dc;border-radius:16px;padding:24px;box-shadow:0 4px 20px #153c2910}
+a{color:#145a3e}a:focus-visible{outline:3px solid #b38825;outline-offset:3px}
+article h2{font-size:1.25rem;margin:0}.domain,.period,.detail{color:#50655a;font-size:.85rem}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 0}
+.stats div{background:#f6faf7;border:1px solid #dfebe4;padding:12px;border-radius:10px}
+.stats b{display:block;font-size:1.7rem;font-variant-numeric:tabular-nums}
+.stats span{display:block;color:#466052;font-size:.78rem}
+.good{color:#147249;font-weight:700}.bad{color:#ac5218;font-weight:700}
+table{border-collapse:collapse;width:100%;font-size:.85rem}caption{text-align:left;font-weight:700;margin:10px 0}
+th,td{border-bottom:1px solid #e3ebe6;text-align:left;padding:8px 6px}
+th:nth-child(n+2),td:nth-child(n+2){text-align:right}
+.links{font-size:.85rem}.notice{max-width:850px;color:#466052}
+</style></head><body><header><h1>Lotos SEO Monitoring</h1>
+<p class="notice">Zvanični Search Console podaci (finalizovani, nisu live Google rezultati).
+Pozicija je prosek, a URL Inspection prikazuje samo odabrani uzorak stranica.
+N/D znači da podaci nisu dostupni, ne poziciju nula.</p></header><main>"""
+    return head + "\n".join(cards) + "</main></body></html>"

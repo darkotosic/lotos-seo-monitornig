@@ -8,6 +8,9 @@ on:
       - 'config/**'
       - 'pyproject.toml'
       - '.github/workflows/ci.yml'
+      - '.github/workflows/seo-daily.yml'
+      - '.github/workflows/telegram-test.yml'
+      - '.github/workflows/seo-watchdog.yml'
   pull_request:
 
 permissions:
@@ -23,4 +26,6 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -e '.[dev]'
       - run: ruff check seo_monitor tests
+      - run: python -m compileall -q seo_monitor
+      - run: python -m seo_monitor validate --config config/sites.yml
       - run: python -m pytest -q

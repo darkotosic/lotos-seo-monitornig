@@ -1,4 +1,4 @@
-"""CLI entrypoint. Offline dry run, independent sites, snapshots, and report artifacts."""
+"""Multi-domain SEO monitoring CLI; read-only services with durable local reports."""
 
 from __future__ import annotations
 
@@ -12,32 +12,56 @@ from zoneinfo import ZoneInfo
 
 from seo_monitor.checks import collect_checks
 from seo_monitor.config import load_config
+from seo_monitor.diagnostics import provider_error
 from seo_monitor.gsc import GoogleSearchConsole, collect_gsc
 from seo_monitor.notify import send_telegram
 from seo_monitor.report import assess, csv_history, csv_keywords, dashboard, markdown, overview
+from seo_monitor.telegram_report import build_alert_message, build_daily_message
+
+TZ = ZoneInfo("Europe/Belgrade")
 
 
-def previous_snapshot(folder: Path, today: str) -> dict | None:
-    entries = sorted(p for p in folder.glob("????-??-??.json") if p.stem < today)
-    if not entries:
-        return None
+def _read_snapshot(path: Path) -> dict | None:
     try:
-        return json.loads(entries[-1].read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else None
     except (OSError, ValueError):
         return None
 
 
+def previous_snapshot(folder: Path, today: str) -> dict | None:
+    """Last known snapshot before the monitoring date, never a future run."""
+    entries = sorted((p for p in folder.glob("????-??-??.json") if p.stem < today), reverse=True)
+    for file in entries:
+        snapshot = _read_snapshot(file)
+        if snapshot is not None:
+            return snapshot
+    return None
+
+
+def _write_json(path: Path, data: dict) -> None:
+    """Atomic replacement prevents half-written daily JSON after a crash."""
+    tmp = path.with_suffix(".json.tmp")
+    try:
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+                       encoding="utf-8")
+        tmp.replace(path)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Read-only multi-domain SEO Monitor")
-    parser.add_argument("run", nargs="?", default="run", choices=["run"])
+    parser = argparse.ArgumentParser(description="Read-only multi-domain SEO monitoring")
+    parser.add_argument("command", nargs="?", default="run", choices=["run", "validate", "notify-test"])
     parser.add_argument("--config", default="config/sites.yml")
     parser.add_argument("--output", default="data")
     parser.add_argument("--reports", default="reports")
     parser.add_argument("--site", help="Optional site ID (ruma, indjija, ...)")
-    parser.add_argument("--date", help="Local date YYYY-MM-DD, optional; for deterministic replay")
-    parser.add_argument("--skip-gsc", action="store_true", help="Only run HTTP/SEO checks; no credentials needed")
-    parser.add_argument("--skip-inspection", action="store_true", help="Skip URL Inspection API")
-    parser.add_argument("--no-notify", action="store_true", help="Disable Telegram")
+    parser.add_argument("--date", help="Local date YYYY-MM-DD; deterministic offline replay")
+    parser.add_argument("--skip-gsc", action="store_true", help="HTTP and SEO only; no credentials")
+    parser.add_argument("--skip-inspection", action="store_true", help="Skip Google URL Inspection")
+    parser.add_argument("--no-notify", action="store_true", help="Do not contact Telegram")
+    parser.add_argument("--preview-telegram", action="store_true", help="Print digest (no secret values)")
     args = parser.parse_args(argv)
 
     settings, sites = load_config(Path(args.config))
@@ -45,9 +69,18 @@ def main(argv: list[str] | None = None) -> int:
         sites = [s for s in sites if s.id == args.site]
         if not sites:
             parser.error(f"Site ID not present or disabled: {args.site}")
-    today = date.fromisoformat(args.date) if args.date else datetime.now(ZoneInfo("Europe/Belgrade")).date()
-    root = Path(args.output)
-    report_dir = Path(args.reports)
+    if args.command == "validate":
+        print(f"Configuration valid: {len(sites)} enabled domain(s): " + ", ".join(s.id for s in sites))
+        return 0
+    if args.command == "notify-test":
+        if args.no_notify:
+            parser.error("notify-test cannot be combined with --no-notify")
+        success = send_telegram("Lotos SEO Monitoring: test Telegram integracije. Nema SEO merenja.")
+        print("Telegram: delivered" if success else "Telegram: failed or not configured")
+        return 0 if success else 2
+
+    today = date.fromisoformat(args.date) if args.date else datetime.now(TZ).date()
+    root, report_dir = Path(args.output), Path(args.reports)
     root.mkdir(parents=True, exist_ok=True)
     report_dir.mkdir(parents=True, exist_ok=True)
     api = None
@@ -56,65 +89,76 @@ def main(argv: list[str] | None = None) -> int:
         try:
             api = GoogleSearchConsole(os.getenv("GOOGLE_APPLICATION_CREDENTIALS", ""))
         except Exception as exc:
-            api_error = f"Google authentication/init failed: {type(exc).__name__}"
+            api_error = provider_error(exc, "Google authentication/init")
+            print(f"[GSC] {api_error}", file=sys.stderr)
 
     snapshots: dict[str, dict] = {}
-    notification_alerts: list[str] = []
+    new_alerts: list[str] = []
     any_error = api_error is not None
     for site in sites:
         folder = root / site.id
         folder.mkdir(parents=True, exist_ok=True)
         old = previous_snapshot(folder, today.isoformat())
         same_day_file = folder / f"{today.isoformat()}.json"
-        try:
-            comparison = json.loads(same_day_file.read_text(encoding="utf-8")) if same_day_file.exists() else old
-        except (OSError, ValueError):
-            comparison = old
+        comparison = _read_snapshot(same_day_file) or old
         snap: dict = {
+            "schema_version": 2,
             "site_id": site.id, "base_url": site.base_url,
-            "created_at": datetime.now(ZoneInfo("Europe/Belgrade")).isoformat(timespec="seconds"),
+            "created_at": datetime.now(TZ).isoformat(timespec="seconds"),
             "monitor_date": today.isoformat(),
         }
         try:
             snap["checks"] = collect_checks(site, settings)
         except Exception as exc:
             snap["checks"] = {}
-            snap["check_error"] = f"HTTP monitoring failed: {type(exc).__name__}"
+            snap["check_error"] = provider_error(exc, "HTTP monitoring")
             any_error = True
         if api:
             try:
                 snap["gsc"] = collect_gsc(api, site, settings, today, inspect=not args.skip_inspection)
             except Exception as exc:
-                snap["gsc_error"] = f"Search Console API failed: {type(exc).__name__}"
+                snap["gsc_error"] = provider_error(exc, "Search Console API")
+                print(f"[{site.id}] {snap['gsc_error']}", file=sys.stderr)
                 any_error = True
         elif not args.skip_gsc:
-            snap["gsc_error"] = api_error
+            snap["gsc_error"] = api_error or "Google authentication failed"
+            any_error = True
+        else:
+            snap["gsc_skipped"] = True
         snap["alerts"] = assess(snap, settings, old)
         if snap.get("check_error"):
             snap["alerts"].append(snap["check_error"])
-        old_alerts = set((comparison or {}).get("alerts", []))
-        notification_alerts += [f"{site.id}: {item}" for item in snap["alerts"] if item not in old_alerts]
-        if any(page.get("error") for page in snap.get("checks", {}).get("pages", [])):
+        snap["alerts"] = sorted(set(snap["alerts"]))
+        previous_alerts = set((comparison or {}).get("alerts", []))
+        new_alerts.extend(f"{site.id}: {item}" for item in snap["alerts"] if item not in previous_alerts)
+        if any(page.get("error") for page in (snap.get("checks") or {}).get("pages", [])):
             any_error = True
-        if any(snap.get("checks", {}).get(key, {}).get("error") for key in ("robots", "sitemap")):
+        if any((snap.get("checks") or {}).get(kind, {}).get("error") for kind in ("robots", "sitemap")):
             any_error = True
-        (folder / f"{today.isoformat()}.json").write_text(
-            json.dumps(snap, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8"
-        )
+        _write_json(same_day_file, snap)
         (report_dir / f"{site.id}-latest.md").write_text(markdown(site, snap), encoding="utf-8")
         csv_keywords(report_dir / f"{site.id}-keywords.csv", snap)
         csv_history(folder, report_dir / f"{site.id}-history.csv", report_dir / f"{site.id}-rank-history.csv")
         snapshots[site.id] = snap
-        print(f"[{site.id}] HTTP checks: {len(snap.get('checks',{}).get('pages',[]))}; "
-              f"alerts: {len(snap['alerts'])}; GSC: {'OK' if 'gsc' in snap else 'unavailable'}")
+        print(f"[{site.id}] HTTP checks: {len((snap.get('checks') or {}).get('pages', []))}; "
+              f"alerts: {len(snap['alerts'])}; GSC: {'OK' if 'gsc' in snap else 'skipped' if args.skip_gsc else 'unavailable'}")
 
     (report_dir / "overview.md").write_text(overview(sites, snapshots), encoding="utf-8")
     (report_dir / "dashboard.html").write_text(dashboard(sites, snapshots), encoding="utf-8")
-    if not args.no_notify and (notification_alerts or os.environ.get("SEO_DAILY_TELEGRAM_SUMMARY") == "true"):
-        message = ("Lotos SEO Monitoring · " + today.isoformat() + "\n" +
-                   ("\n".join(notification_alerts[:25]) if notification_alerts else "Bez novih upozorenja."))
-        if not send_telegram(message):
-            print("Telegram notification not delivered or not configured", file=sys.stderr)
+    message = build_daily_message(sites, snapshots, today)
+    (report_dir / "telegram-preview.txt").write_text(message + "\n", encoding="utf-8")
+    if args.preview_telegram:
+        print("\n" + message)
+    summary_enabled = os.environ.get("SEO_DAILY_TELEGRAM_SUMMARY", "false").lower() == "true"
+    if not args.no_notify and (new_alerts or summary_enabled):
+        notification = message if summary_enabled else build_alert_message(new_alerts, today)
+        telegram_is_configured = bool(os.getenv("TELEGRAM_BOT_TOKEN") and os.getenv("TELEGRAM_CHAT_ID"))
+        delivered = send_telegram(notification)
+        print("Telegram: delivered" if delivered else "Telegram: unavailable or delivery failed")
+        # A configured integration must not be silently reported as successful.
+        # Optional/unconfigured Telegram does not block pure SEO monitoring.
+        if telegram_is_configured and not delivered:
+            any_error = True
     return 2 if any_error else 0
 
 

@@ -12,3 +12,6 @@ service-account*.json
 *.db
 .DS_Store
 !.env.example
+*.tmp
+.coverage
+htmlcov/

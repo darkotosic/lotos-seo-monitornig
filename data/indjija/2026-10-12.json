@@ -1,0 +1,474 @@
+{
+  "alerts": [],
+  "base_url": "https://cvecaraindjija.rs",
+  "checks": {
+    "pages": [
+      {
+        "canonical": "https://cvecaraindjija.rs",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Poručite bukete, ruže i cvetne aranžmane sa dostavom u Inđiji. Cvećara Lotos potvrđuje dostupnost, termin i cenu dostave pre izrade.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "Answer",
+          "BreadcrumbList",
+          "City",
+          "ContactPoint",
+          "FAQPage",
+          "Florist",
+          "GeoCoordinates",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ItemList",
+          "ListItem",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "Question",
+          "SearchAction",
+          "Service",
+          "SiteNavigationElement",
+          "WebPage",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/",
+        "status": 200,
+        "title": "Cvećara Inđija | Dostava cveća i buketa – Lotos",
+        "url": "https://cvecaraindjija.rs/"
+      },
+      {
+        "canonical": "https://cvecaraindjija.rs/kategorije",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Pregled kategorija proizvoda za dostavu za Inđija.",
+        "h1": "Kategorije cveća",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "City",
+          "ContactPoint",
+          "Florist",
+          "GeoCoordinates",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/kategorije",
+        "status": 200,
+        "title": "Kategorije cveća | Cvećara Inđija | Cvećara Inđija | Lotos",
+        "url": "https://cvecaraindjija.rs/kategorije"
+      },
+      {
+        "canonical": "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Pokloni uz cveće - Cvećara Lotos Ruma.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "BreadcrumbList",
+          "City",
+          "CollectionPage",
+          "ContactPoint",
+          "Florist",
+          "GeoCoordinates",
+          "ItemList",
+          "ListItem",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/kategorije/pokloni-uz-cvece",
+        "status": 200,
+        "title": "Pokloni uz cveće | Cvećara Inđija | Lotos",
+        "url": "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece"
+      },
+      {
+        "canonical": "https://cvecaraindjija.rs/prilike/slava",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Buketi i aranžmani za izabranu priliku uz dostavu u Rumi.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "BreadcrumbList",
+          "City",
+          "CollectionPage",
+          "ContactPoint",
+          "Florist",
+          "GeoCoordinates",
+          "ItemList",
+          "ListItem",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/prilike/slava",
+        "status": 200,
+        "title": "Slava | Cvećara Lotos Ruma | Cvećara Inđija | Lotos",
+        "url": "https://cvecaraindjija.rs/prilike/slava"
+      },
+      {
+        "canonical": "https://cvecaraindjija.rs/proizvodi/buket-uspomena",
+        "content_type": "text/html; charset=utf-8",
+        "description": "Buket Uspomena za Rumu i okolinu. Online naručivanje preko Cvećare Lotos Ruma, potvrda dostupnosti, termina dostave i instrukcija za plaćanje nakon slanja narudžbine.",
+        "h1": "Učitavanje...",
+        "jsonld_parse_errors": 0,
+        "jsonld_types": [
+          "Answer",
+          "Brand",
+          "BreadcrumbList",
+          "City",
+          "ContactPoint",
+          "FAQPage",
+          "Florist",
+          "GeoCoordinates",
+          "ListItem",
+          "LocalBusiness",
+          "Offer",
+          "Order",
+          "OrderAction",
+          "Organization",
+          "PostalAddress",
+          "Product",
+          "Question",
+          "SearchAction",
+          "Service",
+          "WebSite"
+        ],
+        "noindex": false,
+        "path": "/proizvodi/buket-uspomena",
+        "status": 200,
+        "title": "Buket Uspomena | Cvećara Lotos Ruma | Cvećara Inđija | Lotos",
+        "url": "https://cvecaraindjija.rs/proizvodi/buket-uspomena"
+      },
+      {
+        "content_type": "image/png",
+        "path": "/twitter-image",
+        "status": 200,
+        "url": "https://cvecaraindjija.rs/twitter-image"
+      }
+    ],
+    "robots": {
+      "allows_home_googlebot": true,
+      "allows_sample_googlebot": {
+        "/": true,
+        "/kategorije": true,
+        "/kategorije/pokloni-uz-cvece": true,
+        "/prilike/slava": true,
+        "/proizvodi/buket-uspomena": true,
+        "/twitter-image": true
+      },
+      "status": 200,
+      "url": "https://cvecaraindjija.rs/robots.txt"
+    },
+    "sitemap": {
+      "is_sitemap_index": false,
+      "loc_count": 77,
+      "sample_urls": [
+        "https://cvecaraindjija.rs",
+        "https://cvecaraindjija.rs/proizvodi",
+        "https://cvecaraindjija.rs/kategorije",
+        "https://cvecaraindjija.rs/prilike",
+        "https://cvecaraindjija.rs/dostava"
+      ],
+      "status": 200,
+      "url": "https://cvecaraindjija.rs/sitemap.xml"
+    }
+  },
+  "created_at": "2026-10-12T01:30:22+02:00",
+  "gsc": {
+    "current_window": {
+      "end": "2026-10-09",
+      "start": "2026-09-12"
+    },
+    "inspections": [
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecaraindjija.rs/",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-10T23:23:46Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": null,
+        "url": "https://cvecaraindjija.rs/",
+        "userCanonical": "https://cvecaraindjija.rs/",
+        "verdict": "PASS"
+      },
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecaraindjija.rs/kategorije",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-11T03:52:14Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": [
+          "https://cvecaraindjija.rs/sitemap.xml"
+        ],
+        "url": "https://cvecaraindjija.rs/kategorije",
+        "userCanonical": "https://cvecaraindjija.rs/kategorije",
+        "verdict": "PASS"
+      },
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-11T03:52:25Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": [
+          "https://cvecaraindjija.rs/sitemap.xml"
+        ],
+        "url": "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece",
+        "userCanonical": "https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece",
+        "verdict": "PASS"
+      },
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecaraindjija.rs/prilike/slava",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-11T03:52:25Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": [
+          "https://cvecaraindjija.rs/sitemap.xml"
+        ],
+        "url": "https://cvecaraindjija.rs/prilike/slava",
+        "userCanonical": "https://cvecaraindjija.rs/prilike/slava",
+        "verdict": "PASS"
+      },
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecaraindjija.rs/proizvodi/buket-uspomena",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-11T03:50:11Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": [
+          "https://cvecaraindjija.rs/sitemap.xml"
+        ],
+        "url": "https://cvecaraindjija.rs/proizvodi/buket-uspomena",
+        "userCanonical": "https://cvecaraindjija.rs/proizvodi/buket-uspomena",
+        "verdict": "PASS"
+      }
+    ],
+    "keywords": [
+      {
+        "current": {
+          "clicks": 5,
+          "ctr": 0.10417,
+          "impressions": 48,
+          "position": 10.35
+        },
+        "previous": null,
+        "query": "cvecara indjija"
+      },
+      {
+        "current": {
+          "clicks": 0,
+          "ctr": 0.0,
+          "impressions": 0,
+          "position": 0.0
+        },
+        "previous": null,
+        "query": "cvećara inđija"
+      },
+      {
+        "current": {
+          "clicks": 0,
+          "ctr": 0.0,
+          "impressions": 14,
+          "position": 6.29
+        },
+        "previous": null,
+        "query": "cvecare indjija"
+      },
+      {
+        "current": {
+          "clicks": 0,
+          "ctr": 0.0,
+          "impressions": 0,
+          "position": 0.0
+        },
+        "previous": null,
+        "query": "dostava cveca indjija"
+      },
+      {
+        "current": {
+          "clicks": 0,
+          "ctr": 0.0,
+          "impressions": 0,
+          "position": 0.0
+        },
+        "previous": null,
+        "query": "buketi indjija"
+      }
+    ],
+    "previous_totals": null,
+    "previous_window": {
+      "end": "2026-09-11",
+      "start": "2026-08-15"
+    },
+    "search_appearances": [
+      {
+        "appearance": "PRODUCT_SNIPPETS",
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 7,
+        "position": 8.0
+      }
+    ],
+    "source": "Google Search Console API; finalized data; Web search",
+    "top_pages": [
+      {
+        "clicks": 10,
+        "ctr": 0.07143,
+        "impressions": 140,
+        "position": 7.47,
+        "url": "https://cvecaraindjija.rs/"
+      },
+      {
+        "clicks": 2,
+        "ctr": 0.5,
+        "impressions": 4,
+        "position": 11.0,
+        "url": "https://cvecaraindjija.rs/proizvodi"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.125,
+        "impressions": 8,
+        "position": 17.62,
+        "url": "https://cvecaraindjija.rs/dostava"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.07692,
+        "impressions": 13,
+        "position": 13.46,
+        "url": "https://cvecaraindjija.rs/kontakt"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 49.0,
+        "url": "https://cvecaraindjija.rs/faq"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 6,
+        "position": 9.83,
+        "url": "https://cvecaraindjija.rs/kako-do-nas"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 7.0,
+        "url": "https://cvecaraindjija.rs/kategorije/buketi"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 20.0,
+        "url": "https://cvecaraindjija.rs/kategorije/cvece-za-vencanje"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 15.0,
+        "url": "https://cvecaraindjija.rs/kategorije/korpe-sa-cvecem"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 8.0,
+        "url": "https://cvecaraindjija.rs/kategorije/poslovni-pokloni"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 9.5,
+        "url": "https://cvecaraindjija.rs/kategorije/ruze"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 15,
+        "position": 13.13,
+        "url": "https://cvecaraindjija.rs/prilike"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 7.0,
+        "url": "https://cvecaraindjija.rs/prilike/rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 4.0,
+        "url": "https://cvecaraindjija.rs/proizvodi/buket-baloni-i-cvece"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 9.0,
+        "url": "https://cvecaraindjija.rs/proizvodi/ljubavni-pastelni-buket"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 9.0,
+        "url": "https://cvecaraindjija.rs/proizvodi/mini-godisnjica"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 10.0,
+        "url": "https://cvecaraindjija.rs/proizvodi/rodjendanska-kutija-pastel-deluxe"
+      }
+    ],
+    "totals": {
+      "clicks": 13,
+      "ctr": 0.07879,
+      "impressions": 165,
+      "position": 7.38
+    }
+  },
+  "monitor_date": "2026-10-12",
+  "site_id": "indjija"
+}

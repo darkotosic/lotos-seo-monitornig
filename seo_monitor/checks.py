@@ -86,6 +86,9 @@ def _document(site: Site, response: httpx.Response, content: bytes) -> dict:
         "title": (soup.title.get_text(" ", strip=True) if soup.title else "")[:200],
         "description": (desc.get("content", "") if desc else "")[:300],
         "h1": (h1.get_text(" ", strip=True) if h1 else "")[:200],
+        # Informational; hydration may later replace this heading. Not a hard SEO error.
+        "ssr_h1_placeholder": bool(h1 and h1.get_text(" ", strip=True).casefold()
+                                   in {"učitavanje...", "loading...", "loading"}),
         "canonical": canonical.get("href") if canonical else None,
         "noindex": "noindex" in robots.lower(),
         "jsonld_types": sorted(ld_types), "jsonld_parse_errors": ld_errors,
@@ -147,6 +150,8 @@ def collect_checks(site: Site, settings: Settings) -> dict:
                         value["loc_count"] = len(urls)
                         value["sample_urls"] = urls[:5]
                         value["is_sitemap_index"] = b"sitemapindex" in content[:1500]
+                        if not urls:
+                            value["error"] = "Sitemap XML contains no loc entries"
                         # No recursive fetching: site controls each sitemap, and parent locs may be child sitemaps.
                     except ElementTree.ParseError:
                         value["error"] = "Invalid sitemap XML"

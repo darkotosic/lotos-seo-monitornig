@@ -1,90 +1,86 @@
-# Lotos SEO Monitoring Bot (enterprise-ready foundation)
+# LOTOS SEO MONITORING v2.0.0
 
-Zasebna Python aplikacija za **cvecararuma.rs** i **cvecaraindjija.rs**, uz podršku za dodatne domene. Ne menja frontend, backend, Django Admin, checkout, Netlify ili postojeći katalog.
+**Enterprise-grade read-only SEO observability za Cvećaru Lotos** — zaseban Python repozitorijum za `cvecararuma.rs`, `cvecaraindjija.rs` i nove lokalne domene. **Nije bot za veštačke klikove**; ne menja prodajne sisteme i ne garantuje Google rangiranje.
 
-## Šta meri
+## Šta dobijaš
 
-- **Google Search Console API** (zvanični podaci): Web klikovi, prikazi, CTR i prosečna pozicija, tekućih i prethodnih 28 dana; izabrane ključne reči, najposećenije stranice i Search Appearance.
-- **URL Inspection API**: poslednje poznato stanje odabranih URL-ova u Google indeksu; pokrivenost, robots, canonical i datum Googlebot posete (ako Google vrati podatke).
-- **HTTP & SEO**: HTTPS odgovor sajtova, 5xx/4xx, homepage, izabrani putevi, `robots.txt`, `sitemap.xml`, title, H1, description, canonical, `noindex`, sintaksa JSON-LD.
-- **Alerti**: nedostupna stranica, sitemap/robots problem, značajan pad prosečne pozicije samo uz dovoljan broj prikaza, nova degradacija indeksiranja i API problemi.
-- **Izveštaji**: JSON snapshots, Markdown, UTF-8 CSV za Excel i statički `dashboard.html`, bez korisničkih podataka.
+| Funkcija | Kako radi | Bezbednosno ograničenje |
+|---|---|---|
+| Search Console API | Klikovi, prikazi, CTR, pozicija, upiti, URL stranice, search appearance | Read-only OAuth scope; finalizovani, ne live podaci |
+| 28d i 7d analitika | Poređenje sa prethodnim istim periodom; 3 dana zakašnjenja podataka | `N/D` ako nema podataka; bez pozicije nula |
+| URL Inspection | Index verdict, coverage, Google canonical, robots/fetch za konfigurisane URL-ove | Samo uzorak; API ne može da zahteva indeksiranje |
+| HTTP/SEO | 200/4xx/5xx, canonical, `noindex`, H1, title, description, JSON-LD, robots i sitemap | HTTPS, isti host, ograničenje 2 MB, nema kupovine |
+| Dnevni Telegram | Stvarni KPI za sve domene, promene, pozicije ključnih reči i indeksiranje | Bez podataka kupaca; običan tekst, do 3500 karaktera |
+| Nedeljni pregled | Svakog ponedeljka u dnevnoj poruci dodaje poređenje poslednjih 7d sa ranijih 7d | Isto finalizovano GSC merenje |
+| SEO upozorenja | Pad pozicije sa dovoljnim brojem prikaza, noindex, 5xx, indeksne regresije, nedostupan API | Alarm je signal za proveru, ne tvrdnja o uzroku |
+| Watchdog | Nezavisan GitHub Actions workflow proverava da li je dnevni job uspeo | Ako sam GitHub Actions ne radi, potreban je nezavisan spoljašnji monitor |
+| Izveštaji | JSON, HTML dashboard, Markdown i Excel CSV, istorija po domenu | Git repo ostaviti **privatnim** |
 
-**Ograničenja:** GSC ne garantuje sve retke upite, broj/pozicija u API-ju nisu live SERP i zavise od perioda, uređaja i lokacije. URL Inspection API **ne omogućava live test, Indexing Request ni Validate Fix**. Bot ne lažira Google klikove i ne šalje robotske pretrage Google-u. Nema hardkodovanih lozinki.
+## Početak za postojeći GitHub repo
 
-## 1. Lokalno pokretanje
+**Ne menjati** Ruma/Indjija frontend, Django/Render, Netlify, checkout, API, CORS, SEO konfiguraciju prodajnih domena. Ovaj projekat se instalira kao zaseban repozitorijum.
 
-Potrebni su Python 3.11+ i instalacioni pristup PyPI-ju.
+1. Napravi backup postojećeg repozitorijuma `darkotosic/lotos-seo-monitornig` (ili novu granu).
+2. Kopiraj kompletan sadržaj ZIP-a u **root postojećeg repozitorijuma**, tako da `.github/workflows/seo-daily.yml` ostane na istom putu.
+3. Sačuvaj `data/` istoriju prethodnih dana koju si eventualno već prikupio; arhiva nosi postojeći početni snapshot iz dostavljenog ZIP-a. Ne briši novije podatke iz GitHub-a.
+4. Ne menjaj postojeća tri GitHub Actions Secret-a: `SEO_GSC_SERVICE_ACCOUNT_JSON`, `SEO_TELEGRAM_BOT_TOKEN`, `SEO_TELEGRAM_CHAT_ID`.
+5. Postojeći `config/sites.yml` i GSC Domain properties za Rumu/Inđiju ostaju nepromenjeni.
+6. Napravi PR, pusti CI, zatim merge i ručno izvrši `SEO Daily Monitoring` iz **Actions**.
+7. Proveri `reports/telegram-preview.txt`, `reports/dashboard.html`, `reports/overview.md` i oba `data/{id}/YYYY-MM-DD.json`.
+8. Iz **Actions → SEO Telegram Connection Test** možeš zasebno testirati Telegram; **SEO Monitoring Watchdog** nadgleda dnevni run.
 
-```bash
-python -m venv .venv
-# Windows PowerShell: .venv\\Scripts\\Activate.ps1
-# Linux/macOS: source .venv/bin/activate
-python -m pip install -e '.[dev]'
+### Instalacija (PowerShell / Windows)
+
+```powershell
+cd C:\projekti\lotos-seo-monitornig
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -e ".[dev]"
+python -m seo_monitor validate --config config/sites.yml
 python -m pytest -q
 ruff check seo_monitor tests
+python -m compileall -q seo_monitor
 ```
 
-Bez Google naloga proveri samo tehničko zdravlje (bez GSC/URL Inspection API-ja):
+**Bez GSC kredencijala**, ali uz stvarne HTTP provere oba produkciona domena:
 
-```bash
-python -m seo_monitor run --skip-gsc --no-notify
+```powershell
+python -m seo_monitor run --skip-gsc --no-notify --preview-telegram
 ```
 
-Pun režim:
+**Sa Google API kredencijalima** (van Git-a):
 
-```bash
-# PowerShell (putanja do privatnog JSON fajla lokalno)
-$env:GOOGLE_APPLICATION_CREDENTIALS="C:\\secure\\seo-gsc.json"
-python -m seo_monitor run --config config/sites.yml --output data --reports reports
+```powershell
+$env:GOOGLE_APPLICATION_CREDENTIALS="C:\secure\lotos\gsc.json"
+python -m seo_monitor run --config config/sites.yml --output data --reports reports --no-notify
 ```
 
-```bash
-# Linux/macOS
-export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/lotos/gsc.json"
-python -m seo_monitor run
+**Test Telegram poruke**, samo nakon unosa novih/rotiranih tajni u env:
+
+```powershell
+$env:TELEGRAM_BOT_TOKEN="NOVI_TOKEN_POSTAVLJEN_LOKALNO"
+$env:TELEGRAM_CHAT_ID="-100..."
+python -m seo_monitor notify-test
 ```
 
-Za jednu prodavnicu:
+Nijedan pravi token ne sme biti u skripti, README-u, Git-u, javnom logu ili `NEXT_PUBLIC_*`. Za GitHub koristi Repository Secrets. Nalog u GSC mora biti dodat za oba domena, a `searchconsole.googleapis.com` uključen u Google Cloud projektu.
 
-```bash
-python -m seo_monitor run --site indjija --skip-inspection
-```
+## GitHub Actions
 
-Izveštaji: `reports/overview.md`, `reports/dashboard.html`, `reports/ruma-latest.md`, `reports/indjija-latest.md`, CSV fajlovi i `data/{site_id}/YYYY-MM-DD.json`.
+| Workflow | Okidač | Dozvole |
+|---|---|---|
+| `.github/workflows/ci.yml` | Push/promene koda i Pull Request | `contents: read` |
+| `.github/workflows/seo-daily.yml` | Svakog dana `06:17 UTC`, ručno | `contents: write` (samo za snapshot commit) |
+| `.github/workflows/telegram-test.yml` | Ručno | `contents: read` |
+| `.github/workflows/seo-watchdog.yml` | Svakog dana `12:00 UTC`, ručno | `actions: read`, `contents: read` |
 
-## 2. Google Search Console API pristup
+**Bez izmene podrazumevanih repository workflow permissions:** dnevni workflow već eksplicitno traži `contents: write`. Podrazumevano repo podešavanje može ostati **read-only**. Ako je `main` zaštićen od direktnog push-a, potrebno je dizajnirati PR/data granu; nemoj uklanjati branch zaštitu samo zbog monitora.
 
-1. U Google Cloud Console napravi projekat namenjen samo ovom monitoringu.
-2. Uključi **Google Search Console API** za taj projekat (Search Analytics i URL Inspection).
-3. Napravi **Service Account**. Ako koristiš JSON ključ, čuvaj ga isključivo u GitHub Secrets ili lokalno, van repozitorijuma. Ako je dostupna bezbednija Workload Identity Federation, preferiraj nju uz zasebnu integraciju.
-4. U Google Search Console, za **svaki domen posebno**, dodaj email Service Account-a u **Settings → Users and permissions** sa dovoljnim dozvolama da čita property podatke i URL Inspection informacije. Dodavanje servisnog naloga ne stvara novi web sajt i ne utiče na indeksiranje.
-5. U `config/sites.yml` postavi `gsc_property` tačno prema stvarnom Search Console property-ju:
-   - Domain property: `sc-domain:cvecararuma.rs`
-   - URL-prefix property: `https://cvecararuma.rs/`
-6. Testiraj ručno preko `workflow_dispatch`; proveri logs, `reports/overview.md` i snapshot fajlove.
+`seo-daily.yml` trenutno postavlja `SEO_DAILY_TELEGRAM_SUMMARY: 'true'`, pa šalje pun dnevni izveštaj i bez alarma. Svako ručno ponovno izvršavanje može ponovo poslati dnevnu poruku. Watchdog može javiti lažan alarm ako GitHub značajno odloži dnevni run.
 
-**Nemoj** stavljati service-account JSON u Netlify, Django, frontend `NEXT_PUBLIC_*`, Git ili commit logove. Bot radi read-only preko `webmasters.readonly` OAuth scope-a.
+## Konfiguracija novih gradova
 
-## 3. Poseban GitHub repozitorijum — preporučeni deploy
-
-Preporučeno ime: `lotos-seo-monitor` (privatan GitHub repozitorijum). Zaseban repo znači da nijedna promena monitora ne može redeploy-ovati prodajni Next.js ili Django servis.
-
-1. Prenesi sadržaj ovog paketa u **koren novog repozitorijuma**.
-2. Settings → Secrets and variables → Actions → **New repository secret**:
-   - `SEO_GSC_SERVICE_ACCOUNT_JSON` — kompletan Google service account JSON (tajna).
-   - `SEO_TELEGRAM_BOT_TOKEN` — opciono.
-   - `SEO_TELEGRAM_CHAT_ID` — opciono.
-3. Settings → Actions → General → Workflow permissions → omogućiti **Read and write permissions** da bi dnevni snapshot mogao da se komituje u `data/` i `reports/`. Ako postoje branch protection pravila, dozvoli odgovarajućem botu upis ili koristi zasebnu data granu.
-4. Actions → **SEO Daily Monitoring** → **Run workflow**. Raspored je svakog dana u **06:17 UTC**.
-5. Monitor je idempotentan po lokalnom datumu: ponovni run istog dana menja postojeći JSON i izveštaj, ne duplira zapise.
-6. GitHub Actions čuva i artefakt rezultata 30 dana; Git istorija čuva dnevne JSON snimke u privatnom repozitorijumu. Vremenom uvedi arhiviranje (npr. starijih od 12 meseci) ako volumen poraste.
-
-GitHub Actions cron može kasniti pod opterećenjem ili biti pauziran u neaktivnom repozitorijumu; za stroge SLA zahteve koristiti pouzdan scheduler.
-
-## 4. Dodavanje novih domena
-
-Primer za `cvecarastarpazova.rs` — **aktivirati tek kada je sajt objavljen i dodat u Search Console**:
+Dovoljno je dodati konfiguraciju u `config/sites.yml`, objaviti stvarnu prodajnu stranicu i dodati postojeći GSC service account u **novi** Search Console Domain property. Nisu potrebni novi Python bot, Render servis ili Django migracija.
 
 ```yaml
   - id: starapazova
@@ -99,48 +95,39 @@ Primer za `cvecarastarpazova.rs` — **aktivirati tek kada je sajt objavljen i d
     inspect_paths: ["/", "/proizvodi"]
 ```
 
-Dodaj na kraj liste `sites:` u `config/sites.yml`, zatim u Search Console dodaj isti Service Account za novi property. **Nije potreban novi bot, Render servis, Django migracija ni Netlify promena.**
+Ostali planirani domeni: `cvecarasremskamitrovica.rs`, `cvecarasabac.rs`, opcionalno `cvecaranovapazova.rs`, `cvecaravrdnik.rs`. Ove adrese u dokumentaciji **nisu tvrdnja da su kupljene, dostupne ili aktivne**. Ne predstavljati Rumu kao fizičku poslovnicu u drugim gradovima.
 
-Predviđeni nazivi: `staramitrovica`/`sremskamitrovica`, `sabac`, `novapazova`, `vrdnik` — ID možeš odabrati, ali mora biti jedinstven. Stvarni domeni, DNS, dostupnost dostave i lokalni sadržaj proveravaju se nezavisno.
-
-## 5. Alarm politika
-
-- **HTTP greške i noindex:** prijavljuju se odmah.
-- **Pad pozicije:** alarm tek ako su i trenutni i prethodni period imali najmanje `min_impressions_for_rank_alert` prikaza (podrazumevano 20), i ako se prosečna pozicija pogoršala za najmanje `rank_drop_alert_positions` (podrazumevano 3).
-- **N/D nije nula**: kada Google ne vrati red za retku ključnu reč, ne prikazujemo lažnu poziciju 0.
-- **Telegram:** slanje samo kada ima novih upozorenja ili ako `SEO_DAILY_TELEGRAM_SUMMARY=true`; bot ne skladišti podatke kupaca.
-- **Upozorenja nisu dokaz uzročnosti**: promena pozicije može nastati zbog lokacije, konkurencije, ponašanja pretrage, promene datuma itd.
-
-## 6. Bezbednosna i SEO ograničenja
-
-- Konfiguracija dozvoljava samo HTTPS hostove i relativne putanje; HTTP monitoring ne prati redirect na drugi host.
-- Ograničava se preuzimanje odgovora na 2 MB i broj testiranih URL-ova po domenu, kako se ne bi opterećivali produkcioni sajtovi.
-- HTTP/SEO provera nije zamena za Lighthouse, mobilni UX ili proveru Checkout toka. Ne šalje test porudžbine.
-- Izveštaj može otkriti interne URL-ove pa **GitHub repozitorijum držati privatnim**.
-- Izbegavati nenamerne SEO regresije: za `cvecararuma.rs` nema automatskih izmena, a buduća implementacija treba da prođe postojeće Ruma regression testove.
-
-## 7. Testovi
+## Najvažnije komande
 
 ```bash
+python -m seo_monitor validate                     # Proveri YAML bez API-ja
+python -m seo_monitor run --no-notify             # Pun GSC + HTTP/SEO test
+python -m seo_monitor run --site indjija --skip-inspection --no-notify
+python -m seo_monitor run --skip-gsc --no-notify --preview-telegram
+python -m seo_monitor notify-test                  # Samo Telegram test
 python -m pytest -q
 ruff check seo_monitor tests
 python -m compileall -q seo_monitor
 ```
 
-Nema izmene postojećeg repozitorijuma, pa nisu potrebne Django migracije, Render/Netlify deploy ili frontend build za ovaj nezavisni paket. Kada se bot kasnije integriše direktno u postojeći repozitorijum, obavezno ponoviti punu postojeću Django/Next.js CI kontrolu.
+## Gde su rezultati
 
-## Relevantna Google dokumentacija
+- `reports/dashboard.html` — pregled svih domena, trendova i ključnih reči, bez JavaScript zavisnosti.
+- `reports/telegram-preview.txt` — tačan tekst poslednjeg dnevnog Telegram izveštaja, bez tokena.
+- `reports/{id}-latest.md` — GSC metrike 28d i 7d, top strane, keyword podaci, URL Inspection i tehničke provere.
+- `reports/{id}-history.csv` i `{id}-rank-history.csv` — Excel-kompatibilna istorija.
+- `data/{id}/YYYY-MM-DD.json` — snapshot za svaki dan, sa kontrolom integriteta pri upisu.
 
-- [Search Analytics API](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)
-- [URL Inspection API](https://developers.google.com/webmaster-tools/v1/urlInspection.index/inspect)
-- [Search Console API reference](https://developers.google.com/webmaster-tools/v1/api_reference_index)
+**Ograničenja:** GSC podaci kasne, podaci za retke upite mogu izostati, prosečna pozicija nije trenutno #1, URL Inspection nije kompletan Page indexing izveštaj, HTTP status 200 ne potvrđuje sve klijentske funkcije, HTML HTTP-check nije JS renderer. Nema automatskog SEO pisanja niti podataka o narudžbinama/konverzijama. Za pravi 24/7 SLA potrebna je nezavisna infrastruktura izvan GitHub Actions.
 
-## Kompletna dokumentacija na srpskom
+## Dokumentacija
 
-- **[KOMPLETNO UPUTSTVO](docs/KOMPLETNO_UPUTSTVO.md)** — funkcije, koristi, Windows instalacija, Google Cloud, Google Search Console dozvole, GitHub Actions, Telegram, dodavanje domena, troubleshooting i testovi.
-- **[STRUKTURA I TEHNIČKA DOKUMENTACIJA](docs/STRUKTURA_I_TEHNICKA_DOKUMENTACIJA.md)** — moduli, API ugovori, izlazni podaci, bezbednost i error kodovi.
-- **[SEO STRATEGIJA I KPI](docs/SEO_STRATEGIJA_I_KPI.md)** — Ruma, Inđija, budući regionalni domeni, SEO metrike, alarmi i radni proces.
+- [`docs/OPERATIVNI_PRIRUCNIK_V2.md`](docs/OPERATIVNI_PRIRUCNIK_V2.md) — koraci, upozorenja i provere.
+- [`docs/MIGRACIJA_V1_V2.md`](docs/MIGRACIJA_V1_V2.md) — bezbedno ažuriranje postojećeg repozitorijuma.
+- [`docs/SECURITY.md`](docs/SECURITY.md) — poverljivost, token rotacija, GitHub privilegije i rizici.
+- [`docs/TELEGRAM_IZVESTAJ.md`](docs/TELEGRAM_IZVESTAJ.md) — format i značenje metrika.
+- [`docs/KOMPLETNO_UPUTSTVO.md`](docs/KOMPLETNO_UPUTSTVO.md) — originalna v1 dokumentacija (arhiva).
+- [`docs/STRUKTURA_I_TEHNICKA_DOKUMENTACIJA.md`](docs/STRUKTURA_I_TEHNICKA_DOKUMENTACIJA.md) — izvorni opis.
+- [`docs/SEO_STRATEGIJA_I_KPI.md`](docs/SEO_STRATEGIJA_I_KPI.md) — poslovni SEO KPI.
 
-Posle svakog pokretanja nastaju i `reports/{site_id}-history.csv` (dnevni trend ukupnih GSC metrika) i `reports/{site_id}-rank-history.csv` (trend pozicija odabranih ključnih reči). Istorijski CSV čita prethodne JSON snapshotove iz `data/` i ne zahteva novu bazu podataka.
-
-**Napomena o verifikaciji:** offline testovi i sintaksa mogu se proveriti u dostavljenom paketu; bez pristupa privatnim Google, GitHub i Telegram kredencijalima nije moguće tvrditi da je monitoring već uspešno povezan sa produkcionim Search Console nalozima.
+Pripremljena arhiva zasniva se na stvarno dostavljenom `lotos-seo-monitornig-main.zip`. **Nijedna produkciona integracija nije pozvana sa stvarnim tajnama tokom izrade ove verzije.**

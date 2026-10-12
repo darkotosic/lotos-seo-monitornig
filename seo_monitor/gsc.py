@@ -6,6 +6,7 @@ from datetime import date, timedelta
 from typing import Any
 
 from seo_monitor.config import Settings, Site
+from seo_monitor.diagnostics import provider_error
 
 SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
 
@@ -13,11 +14,15 @@ SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
 def metrics(row: dict[str, Any] | None) -> dict[str, Any] | None:
     if row is None:
         return None
+    # Google may report an empty row. A position of 0 is not a ranking.
+    if int(row.get("impressions", 0)) <= 0:
+        return None
     return {
         "clicks": int(row.get("clicks", 0)),
         "impressions": int(row.get("impressions", 0)),
         "ctr": round(float(row.get("ctr", 0)), 5),
-        "position": round(float(row.get("position", 0)), 2),
+        "position": (round(float(row["position"]), 2)
+                     if row.get("position") is not None and float(row["position"]) > 0 else None),
     }
 
 
@@ -77,13 +82,23 @@ def collect_gsc(api: GoogleSearchConsole, site: Site, settings: Settings, today:
     # No dimensions gives site-level totals, not a sum of privacy-filtered query rows.
     result["totals"] = _first(api.query(prop, start, end))
     result["previous_totals"] = _first(api.query(prop, previous_start, previous_end))
+    # Comparable seven-day windows, useful for weekly executive reporting.
+    week_start = end - timedelta(days=6)
+    preceding_week_end = week_start - timedelta(days=1)
+    preceding_week_start = preceding_week_end - timedelta(days=6)
+    result["weekly_window"] = {"start": week_start.isoformat(), "end": end.isoformat()}
+    result["weekly_totals"] = _first(api.query(prop, week_start, end))
+    result["previous_weekly_totals"] = _first(api.query(prop, preceding_week_start,
+                                                           preceding_week_end))
     pages = api.query(prop, start, end, ["page"], limit=200)
     result["top_pages"] = [
-        {"url": r["keys"][0], **metrics(r)} for r in pages.get("rows", []) if r.get("keys")
+        {"url": r["keys"][0], **metrics(r)} for r in pages.get("rows", [])
+        if r.get("keys") and metrics(r) is not None
     ]
     appearances = api.query(prop, start, end, ["searchAppearance"], limit=100)
     result["search_appearances"] = [
-        {"appearance": r["keys"][0], **metrics(r)} for r in appearances.get("rows", []) if r.get("keys")
+        {"appearance": r["keys"][0], **metrics(r)} for r in appearances.get("rows", [])
+        if r.get("keys") and metrics(r) is not None
     ]
     result["keywords"] = []
     for keyword in site.keywords:
@@ -99,6 +114,6 @@ def collect_gsc(api: GoogleSearchConsole, site: Site, settings: Settings, today:
                 result["inspections"].append({"url": url, **api.inspect(prop, url)})
             except Exception as exc:
                 result["inspections"].append({
-                    "url": url, "error": f"Inspection unavailable: {type(exc).__name__}",
+                    "url": url, "error": provider_error(exc, "URL Inspection"),
                 })
     return result
