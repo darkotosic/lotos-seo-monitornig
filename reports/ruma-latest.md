@@ -1,123 +1,123 @@
 # SEO izveštaj — Cvećara Lotos Ruma
 
-Generisano: 2026-10-12T21:26:18+02:00  |  Domen: https://cvecararuma.rs
+Generisano: 2026-10-13T16:13:20+02:00  |  Domen: https://cvecararuma.rs
 
 ## Google Search Console — Web pretraga
-Period: 2026-09-12 do 2026-10-09 (finalizovani podaci)
+Period: 2026-09-13 do 2026-10-10 (finalizovani podaci)
 
 | Pokazatelj | Tekući period | Prethodni period |
 |---|---:|---:|
-| Klikovi | 148 | 133 |
-| Prikazi | 3765 | 3263 |
-| CTR | 3.9% | 4.1% |
+| Klikovi | 151 | 132 |
+| Prikazi | 3789 | 3316 |
+| CTR | 4.0% | 4.0% |
 | Prosečna pozicija | 5.9 | 6.1 |
 
 ## Nedeljno poređenje — 7 + 7 dana
 
-Period: 2026-10-03 do 2026-10-09
+Period: 2026-10-04 do 2026-10-10
 
 | Pokazatelj | Poslednjih 7 dana | Prethodnih 7 dana |
 |---|---:|---:|
-| Klikovi | 32 | 25 |
-| Prikazi | 852 | 936 |
-| Pozicija | 6.3 | 5.9 |
+| Klikovi | 36 | 27 |
+| Prikazi | 906 | 923 |
+| Pozicija | 6.3 | 5.8 |
 
 ## Ključne reči
 
 | Upit | Klikovi | Prikazi | CTR | Pozicija | Prethodna pozicija |
 |---|---:|---:|---:|---:|---:|
-| cvecara ruma | 22 | 331 | 6.6% | 1.5 | 2.6 |
-| cvećara ruma | 6 | 62 | 9.7% | 1.6 | 1.7 |
-| cvecare ruma | 6 | 83 | 7.2% | 2.0 | 1.6 |
-| cvecara lotos ruma | 8 | 23 | 34.8% | 1.0 | 1.0 |
+| cvecara ruma | 21 | 337 | 6.2% | 1.6 | 2.6 |
+| cvećara ruma | 5 | 56 | 8.9% | 1.6 | 1.6 |
+| cvecare ruma | 3 | 83 | 3.6% | 2.0 | 1.6 |
+| cvecara lotos ruma | 10 | 28 | 35.7% | 1.0 | 1.0 |
 | dostava cveca ruma | N/D | N/D | N/D | N/D | N/D |
 
 ## Najposećenije stranice
 
 | URL | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| https://cvecararuma.rs/ | 84 | 1158 | 4.0 |
-| https://cvecararuma.rs/cvecara-stara-pazova | 12 | 298 | 7.1 |
-| https://cvecararuma.rs/cvecara-sremska-mitrovica | 10 | 254 | 8.1 |
-| https://cvecararuma.rs/cvecara-indjija | 7 | 374 | 7.1 |
-| http://cvecararuma.rs/ | 6 | 587 | 1.9 |
-| https://cvecararuma.rs/dostava-cveca-ruma | 6 | 124 | 3.7 |
-| https://cvecararuma.rs/cvecara-nova-pazova | 4 | 227 | 6.8 |
-| https://cvecararuma.rs/cvecara-ruma | 4 | 387 | 5.3 |
-| https://cvecararuma.rs/cvecara-sabac | 3 | 225 | 8.0 |
-| https://cvecararuma.rs/cvecara-irig | 2 | 77 | 7.0 |
-| https://cvecararuma.rs/kontakt | 2 | 63 | 2.2 |
-| https://cvecararuma.rs/proizvodi | 2 | 115 | 6.1 |
-| https://cvecararuma.rs/kategorije/buketi | 1 | 182 | 8.1 |
-| https://cvecararuma.rs/kategorije/cvece-za-vencanje | 1 | 6 | 12.0 |
-| https://cvecararuma.rs/kategorije/korpe-sa-cvecem | 1 | 91 | 5.9 |
+| https://cvecararuma.rs/ | 85 | 1174 | 4.0 |
+| https://cvecararuma.rs/cvecara-stara-pazova | 14 | 319 | 7.0 |
+| https://cvecararuma.rs/cvecara-sremska-mitrovica | 10 | 248 | 8.1 |
+| https://cvecararuma.rs/cvecara-indjija | 8 | 371 | 7.0 |
+| https://cvecararuma.rs/dostava-cveca-ruma | 6 | 128 | 3.9 |
+| http://cvecararuma.rs/ | 5 | 593 | 2.0 |
+| https://cvecararuma.rs/cvecara-nova-pazova | 4 | 235 | 6.8 |
+| https://cvecararuma.rs/cvecara-ruma | 4 | 390 | 5.2 |
+| https://cvecararuma.rs/cvecara-sabac | 3 | 217 | 7.9 |
+| https://cvecararuma.rs/cvecara-irig | 2 | 71 | 7.0 |
+| https://cvecararuma.rs/kontakt | 2 | 68 | 2.5 |
+| https://cvecararuma.rs/proizvodi | 2 | 110 | 6.0 |
+| https://cvecararuma.rs/kategorije/buketi | 1 | 192 | 8.1 |
+| https://cvecararuma.rs/kategorije/cvece-za-vencanje | 1 | 5 | 4.4 |
+| https://cvecararuma.rs/kategorije/korpe-sa-cvecem | 1 | 92 | 5.7 |
 
 ## Dodatni upiti iz Search Console (uzorak do 250)
 
 | Upit | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| cvecara ruma | 22 | 331 | 1.5 |
-| cvecara lotos ruma | 8 | 23 | 1.0 |
-| cvecare ruma | 6 | 83 | 2.0 |
-| cvećara ruma | 6 | 62 | 1.6 |
-| cvecara lotos | 2 | 53 | 5.5 |
-| cvećare ruma | 2 | 24 | 1.7 |
+| cvecara ruma | 21 | 337 | 1.6 |
+| cvecara lotos ruma | 10 | 28 | 1.0 |
+| cvećara ruma | 5 | 56 | 1.6 |
+| cvecare ruma | 3 | 83 | 2.0 |
+| cvecara lotos | 2 | 54 | 5.3 |
+| cvećare ruma | 2 | 23 | 1.7 |
 | ruma cvecara | 2 | 15 | 1.7 |
 | buket za mamu | 1 | 18 | 1.6 |
-| cvecara | 1 | 12 | 6.8 |
-| cvecara stara pazova | 1 | 132 | 7.2 |
-| cvecare indjija | 1 | 27 | 8.4 |
-| cvecare stara pazova | 1 | 24 | 6.8 |
-| cvećara stara pazova | 1 | 29 | 7.3 |
+| cvecara | 1 | 16 | 5.8 |
+| cvecara indjija | 1 | 174 | 6.9 |
+| cvecara stara pazova | 1 | 143 | 7.2 |
+| cvecare indjija | 1 | 25 | 8.2 |
+| cvecare stara pazova | 1 | 26 | 6.8 |
+| cvećara stara pazova | 1 | 30 | 7.3 |
 | cvećare sremska mitrovica | 1 | 1 | 8.0 |
 | именно сайты | 1 | 1 | 2.0 |
 | beli buket | 0 | 1 | 4.0 |
-| buket | 0 | 8 | 23.6 |
+| buket | 0 | 8 | 20.2 |
 | buket za rodjendan | 0 | 1 | 3.0 |
-| buketi | 0 | 12 | 27.3 |
+| buketi | 0 | 15 | 27.5 |
 | buketi cveća za rođendan | 0 | 1 | 2.0 |
 | buketi za rođendan | 0 | 3 | 5.7 |
 | cena | 0 | 1 | 1.0 |
 | cena buketa | 0 | 1 | 1.0 |
 | cene | 0 | 1 | 2.0 |
-| crvena zona ruma | 0 | 3 | 1.0 |
 
 ## Google Image Search
 
-- Klikovi: 8
-- Prikazi: 1539
-- Prosečna pozicija: 33.0
+- Klikovi: 7
+- Prikazi: 1540
+- Prosečna pozicija: 33.1
 
 ## Uređaji
 
 | Segment | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| MOBILE | 127 | 3425 | 5.7 |
-| DESKTOP | 21 | 331 | 7.7 |
-| TABLET | 0 | 9 | 4.4 |
+| MOBILE | 130 | 3448 | 5.7 |
+| DESKTOP | 21 | 333 | 7.8 |
+| TABLET | 0 | 8 | 4.5 |
 
 ## Zemlje
 
 | Segment | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| srb | 124 | 3415 | 5.9 |
-| deu | 6 | 64 | 6.2 |
+| srb | 125 | 3438 | 5.9 |
+| deu | 6 | 63 | 6.2 |
 | can | 3 | 9 | 3.8 |
 | rou | 3 | 12 | 2.2 |
 | bih | 2 | 48 | 6.4 |
 | prt | 2 | 3 | 1.0 |
-| aus | 1 | 2 | 6.5 |
+| are | 1 | 4 | 4.5 |
+| aus | 1 | 4 | 5.5 |
 | aut | 1 | 15 | 5.5 |
 | esp | 1 | 5 | 6.0 |
-| hrv | 1 | 50 | 3.2 |
-| mne | 1 | 14 | 6.5 |
-| svn | 1 | 6 | 3.8 |
+| fra | 1 | 5 | 3.0 |
+| hrv | 1 | 50 | 3.3 |
 
 ## Search appearance
 
 | Tip | Klikovi | Prikazi |
 |---|---:|---:|
-| PRODUCT_SNIPPETS | 6 | 245 |
+| PRODUCT_SNIPPETS | 6 | 247 |
 
 ## Google indeks (URL Inspection API)
 
@@ -141,21 +141,21 @@ Period: 2026-10-03 do 2026-10-09
 
 ## SEO mogućnosti (heuristika, nije prognoza)
 
-- P1 — https://cvecararuma.rs/ \| pozicija 4.0, prikazi 1158: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — http://cvecararuma.rs/ \| pozicija 1.9, prikazi 587: Visoka pozicija uz nizak CTR: proveriti stvarni SERP, naslov i snippet
-- P1 — https://cvecararuma.rs/cvecara-ruma \| pozicija 5.3, prikazi 387: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/cvecara-indjija \| pozicija 7.1, prikazi 374: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/cvecara-stara-pazova \| pozicija 7.1, prikazi 298: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/cvecara-sremska-mitrovica \| pozicija 8.1, prikazi 254: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/cvecara-nova-pazova \| pozicija 6.8, prikazi 227: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/cvecara-sabac \| pozicija 8.0, prikazi 225: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/kategorije/buketi \| pozicija 8.1, prikazi 182: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — cvecara indjija \| pozicija 6.9, prikazi 171: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/dostava-cveca-u-sremu \| pozicija 9.0, prikazi 143: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — cvecara stara pazova \| pozicija 7.2, prikazi 132: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/proizvodi \| pozicija 6.1, prikazi 115: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — cvecara nova pazova \| pozicija 6.9, prikazi 108: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — https://cvecararuma.rs/kategorije/korpe-sa-cvecem \| pozicija 5.9, prikazi 91: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — http://cvecararuma.rs/ \| pozicija 2.0, prikazi 593: Visoka pozicija uz nizak CTR: proveriti stvarni SERP, naslov i snippet
+- P1 — https://cvecararuma.rs/cvecara-ruma \| pozicija 5.2, prikazi 390: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/cvecara-indjija \| pozicija 7.0, prikazi 371: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/cvecara-stara-pazova \| pozicija 7.0, prikazi 319: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/cvecara-sremska-mitrovica \| pozicija 8.1, prikazi 248: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/cvecara-nova-pazova \| pozicija 6.8, prikazi 235: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/cvecara-sabac \| pozicija 7.9, prikazi 217: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/kategorije/buketi \| pozicija 8.1, prikazi 192: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — cvecara indjija \| pozicija 6.9, prikazi 174: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — cvecara stara pazova \| pozicija 7.2, prikazi 143: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/dostava-cveca-u-sremu \| pozicija 9.2, prikazi 135: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — cvecara nova pazova \| pozicija 6.9, prikazi 112: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/proizvodi \| pozicija 6.0, prikazi 110: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/kategorije/korpe-sa-cvecem \| pozicija 5.7, prikazi 92: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecararuma.rs/kako-do-nas \| pozicija 8.7, prikazi 86: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 
 ## Upozorenja
 
