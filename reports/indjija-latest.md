@@ -1,34 +1,34 @@
 # SEO izveštaj — Cvećara Inđija — Lotos
 
-Generisano: 2026-10-13T16:13:44+02:00  |  Domen: https://cvecaraindjija.rs
+Generisano: 2026-10-14T13:54:34+02:00  |  Domen: https://cvecaraindjija.rs
 
 ## Google Search Console — Web pretraga
-Period: 2026-09-13 do 2026-10-10 (finalizovani podaci)
+Period: 2026-09-14 do 2026-10-11 (finalizovani podaci)
 
 | Pokazatelj | Tekući period | Prethodni period |
 |---|---:|---:|
-| Klikovi | 14 | N/D |
-| Prikazi | 191 | N/D |
-| CTR | 7.3% | N/D |
-| Prosečna pozicija | 7.5 | N/D |
+| Klikovi | 18 | N/D |
+| Prikazi | 224 | N/D |
+| CTR | 8.0% | N/D |
+| Prosečna pozicija | 7.2 | N/D |
 
 ## Nedeljno poređenje — 7 + 7 dana
 
-Period: 2026-10-04 do 2026-10-10
+Period: 2026-10-05 do 2026-10-11
 
 | Pokazatelj | Poslednjih 7 dana | Prethodnih 7 dana |
 |---|---:|---:|
-| Klikovi | 10 | 4 |
-| Prikazi | 125 | 66 |
-| Pozicija | 7.1 | 8.3 |
+| Klikovi | 12 | 5 |
+| Prikazi | 141 | 76 |
+| Pozicija | 6.8 | 7.8 |
 
 ## Ključne reči
 
 | Upit | Klikovi | Prikazi | CTR | Pozicija | Prethodna pozicija |
 |---|---:|---:|---:|---:|---:|
-| cvecara indjija | 6 | 61 | 9.8% | 9.7 | N/D |
-| cvećara inđija | N/D | N/D | N/D | N/D | N/D |
-| cvecare indjija | 0 | 14 | 0.0% | 6.3 | N/D |
+| cvecara indjija | 8 | 71 | 11.3% | 8.9 | N/D |
+| cvećara inđija | 0 | 2 | 0.0% | 3.0 | N/D |
+| cvecare indjija | 0 | 16 | 0.0% | 6.0 | N/D |
 | dostava cveca indjija | N/D | N/D | N/D | N/D | N/D |
 | buketi indjija | N/D | N/D | N/D | N/D | N/D |
 
@@ -36,19 +36,19 @@ Period: 2026-10-04 do 2026-10-10
 
 | URL | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| https://cvecaraindjija.rs/ | 11 | 159 | 7.6 |
+| https://cvecaraindjija.rs/ | 15 | 190 | 7.1 |
 | https://cvecaraindjija.rs/proizvodi | 2 | 8 | 9.2 |
-| https://cvecaraindjija.rs/dostava | 1 | 9 | 16.7 |
-| https://cvecaraindjija.rs/kontakt | 1 | 14 | 13.9 |
+| https://cvecaraindjija.rs/dostava | 1 | 12 | 14.6 |
+| https://cvecaraindjija.rs/kontakt | 1 | 15 | 14.3 |
 | https://cvecaraindjija.rs/faq | 0 | 1 | 49.0 |
-| https://cvecaraindjija.rs/kako-do-nas | 0 | 10 | 9.5 |
+| https://cvecaraindjija.rs/kako-do-nas | 0 | 16 | 9.4 |
 | https://cvecaraindjija.rs/kategorije/buketi | 0 | 2 | 7.0 |
 | https://cvecaraindjija.rs/kategorije/cvece-za-rodjendan | 0 | 1 | 6.0 |
 | https://cvecaraindjija.rs/kategorije/cvece-za-vencanje | 0 | 1 | 20.0 |
 | https://cvecaraindjija.rs/kategorije/korpe-sa-cvecem | 0 | 1 | 15.0 |
 | https://cvecaraindjija.rs/kategorije/poslovni-pokloni | 0 | 3 | 8.0 |
 | https://cvecaraindjija.rs/kategorije/ruze | 0 | 2 | 9.5 |
-| https://cvecaraindjija.rs/prilike | 0 | 16 | 13.5 |
+| https://cvecaraindjija.rs/prilike | 0 | 18 | 13.2 |
 | https://cvecaraindjija.rs/prilike/rodjendan | 0 | 1 | 7.0 |
 | https://cvecaraindjija.rs/proizvodi/buket-baloni-i-cvece | 0 | 1 | 4.0 |
 
@@ -56,10 +56,11 @@ Period: 2026-10-04 do 2026-10-10
 
 | Upit | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| cvecara indjija | 6 | 61 | 9.7 |
-| cvecara indjija radno vreme | 0 | 4 | 5.0 |
+| cvecara indjija | 8 | 71 | 8.9 |
+| cvecara indjija radno vreme | 0 | 8 | 4.5 |
 | cvecara near me | 0 | 1 | 3.0 |
-| cvecare indjija | 0 | 14 | 6.3 |
+| cvecare indjija | 0 | 16 | 6.0 |
+| cvećara inđija | 0 | 2 | 3.0 |
 
 ## Google Image Search
 
@@ -71,14 +72,14 @@ Period: 2026-10-04 do 2026-10-10
 
 | Segment | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| MOBILE | 10 | 170 | 7.2 |
-| DESKTOP | 4 | 21 | 10.1 |
+| MOBILE | 12 | 195 | 7.0 |
+| DESKTOP | 6 | 29 | 8.3 |
 
 ## Zemlje
 
 | Segment | Klikovi | Prikazi | Pozicija |
 |---|---:|---:|---:|
-| srb | 14 | 190 | 7.5 |
+| srb | 18 | 223 | 7.2 |
 | deu | 0 | 1 | 9.0 |
 
 ## Search appearance
@@ -112,8 +113,8 @@ Period: 2026-10-04 do 2026-10-10
 
 ## SEO mogućnosti (heuristika, nije prognoza)
 
-- P1 — https://cvecaraindjija.rs/ \| pozicija 7.6, prikazi 159: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- P1 — cvecara indjija \| pozicija 9.7, prikazi 61: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — https://cvecaraindjija.rs/ \| pozicija 7.1, prikazi 190: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- P1 — cvecara indjija \| pozicija 8.9, prikazi 71: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 
 ## Upozorenja
 
