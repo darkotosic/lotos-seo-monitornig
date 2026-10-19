@@ -1,0 +1,17 @@
+LOTOS SEO | NEDELJNI AUDIT | 2026-10-19
+Stvarni tehnički nalazi; preporuke zahtevaju ljudsku proveru.
+
+Cvećara Lotos Ruma
+Sitemap: 87 URL-ova
+Crawler: 80/80 HTTP 200
+Content/schema/image nalaza: 119
+PageSpeed: 0 uspešnih merenja
+
+Cvećara Inđija — Lotos
+Sitemap: 76 URL-ova
+Crawler: 76/76 HTTP 200
+Content/schema/image nalaza: 128
+PageSpeed: 0 uspešnih merenja
+
+Kompletna analiza: GitHub / reports/*-audit.md
+Nema plaćenih API-ja.
