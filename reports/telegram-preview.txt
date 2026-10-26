@@ -1,31 +1,37 @@
-LOTOS SEO MONITORING | 2026-10-25
+LOTOS SEO MONITORING | 2026-10-26
 Google Search Console · Web · poslednjih 28 dana (sa zakašnjenjem)
 
 Cvećara Lotos Ruma | https://cvecararuma.rs
-Period: 2026-09-25 — 2026-10-22
-Klikovi: 138 (-11%)
-Prikazi: 3.566 (-3%)
-CTR: 3.9%
-Prosečna pozicija: 5.9 (bolje 0.1)
+Period: 2026-09-26 — 2026-10-23
+Klikovi: 136 (-13%)
+Prikazi: 3.557 (-4%)
+CTR: 3.8%
+Prosečna pozicija: 5.9 (stabilno)
 Upiti (prosečne pozicije):
-- cvecara ruma: 1.6 (stabilno) · 301 prikaza
-- cvecare ruma: 2.0 (lošije 0.1) · 81 prikaza
-- cvećara ruma: 1.6 (stabilno) · 61 prikaza
+- cvecara ruma: 1.6 (stabilno) · 305 prikaza
+- cvecare ruma: 2.0 (lošije 0.1) · 79 prikaza
+- cvećara ruma: 1.6 (stabilno) · 56 prikaza
 URL Inspection uzorak: 3 indeksirano, 0 problem, 0 nepoznato
 HTTP: 5/5 odgovora 200
+Nedeljni pregled (7d naspram prethodnih 7d):
+- Klikovi: 29 (-42%)
+- Prikazi: 794 (-19%)
 
 Cvećara Inđija — Lotos | https://cvecaraindjija.rs
-Period: 2026-09-25 — 2026-10-22
+Period: 2026-09-26 — 2026-10-23
 Klikovi: 30
-Prikazi: 428
-CTR: 7.0%
-Prosečna pozicija: 6.1
+Prikazi: 444
+CTR: 6.8%
+Prosečna pozicija: 6.0
 Upiti (prosečne pozicije):
-- cvecara indjija: 6.5 · 138 prikaza
-- cvecare indjija: 5.1 · 29 prikaza
-- cvećara inđija: 3.6 · 9 prikaza
+- cvecara indjija: 6.4 · 143 prikaza
+- cvecare indjija: 5.0 · 31 prikaza
+- cvećara inđija: 3.5 · 10 prikaza
 URL Inspection uzorak: 5 indeksirano, 0 problem, 0 nepoznato
 HTTP: 6/6 odgovora 200
+Nedeljni pregled (7d naspram prethodnih 7d):
+- Klikovi: 7 (-30%)
+- Prikazi: 131 (-11%)
 
 Upozorenja: 0
 Bez aktivnih upozorenja.
