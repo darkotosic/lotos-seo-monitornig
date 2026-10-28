@@ -1,0 +1,1653 @@
+{
+  "alerts": [
+    "HTTP/on-page: /: ConnectTimeout",
+    "HTTP/on-page: /dostava: ConnectTimeout",
+    "HTTP/on-page: /kategorije: ConnectTimeout",
+    "HTTP/on-page: /kontakt: ConnectTimeout",
+    "HTTP/on-page: /proizvodi: ConnectTimeout",
+    "NEW outage: /",
+    "NEW outage: /dostava",
+    "NEW outage: /kategorije",
+    "NEW outage: /kontakt",
+    "NEW outage: /proizvodi",
+    "robots: ConnectTimeout",
+    "sitemap: ConnectTimeout"
+  ],
+  "base_url": "https://cvecararuma.rs",
+  "checks": {
+    "pages": [
+      {
+        "error": "ConnectTimeout",
+        "path": "/",
+        "url": "https://cvecararuma.rs/"
+      },
+      {
+        "error": "ConnectTimeout",
+        "path": "/proizvodi",
+        "url": "https://cvecararuma.rs/proizvodi"
+      },
+      {
+        "error": "ConnectTimeout",
+        "path": "/kategorije",
+        "url": "https://cvecararuma.rs/kategorije"
+      },
+      {
+        "error": "ConnectTimeout",
+        "path": "/dostava",
+        "url": "https://cvecararuma.rs/dostava"
+      },
+      {
+        "error": "ConnectTimeout",
+        "path": "/kontakt",
+        "url": "https://cvecararuma.rs/kontakt"
+      }
+    ],
+    "robots": {
+      "error": "ConnectTimeout",
+      "url": "https://cvecararuma.rs/robots.txt"
+    },
+    "sitemap": {
+      "error": "ConnectTimeout",
+      "url": "https://cvecararuma.rs/sitemap.xml"
+    }
+  },
+  "created_at": "2026-10-28T13:56:28+01:00",
+  "gsc": {
+    "countries": [
+      {
+        "clicks": 115,
+        "country": "srb",
+        "ctr": 0.03614,
+        "impressions": 3182,
+        "position": 5.92
+      },
+      {
+        "clicks": 4,
+        "country": "bih",
+        "ctr": 0.09756,
+        "impressions": 41,
+        "position": 6.07
+      },
+      {
+        "clicks": 4,
+        "country": "deu",
+        "ctr": 0.09756,
+        "impressions": 41,
+        "position": 6.0
+      },
+      {
+        "clicks": 3,
+        "country": "pol",
+        "ctr": 0.3,
+        "impressions": 10,
+        "position": 1.4
+      },
+      {
+        "clicks": 2,
+        "country": "prt",
+        "ctr": 0.66667,
+        "impressions": 3,
+        "position": 1.0
+      },
+      {
+        "clicks": 2,
+        "country": "rou",
+        "ctr": 0.33333,
+        "impressions": 6,
+        "position": 2.83
+      },
+      {
+        "clicks": 2,
+        "country": "swe",
+        "ctr": 0.16667,
+        "impressions": 12,
+        "position": 4.67
+      },
+      {
+        "clicks": 1,
+        "country": "are",
+        "ctr": 1.0,
+        "impressions": 1,
+        "position": 2.0
+      },
+      {
+        "clicks": 1,
+        "country": "aus",
+        "ctr": 0.25,
+        "impressions": 4,
+        "position": 5.75
+      },
+      {
+        "clicks": 1,
+        "country": "aut",
+        "ctr": 0.03704,
+        "impressions": 27,
+        "position": 4.74
+      },
+      {
+        "clicks": 1,
+        "country": "esp",
+        "ctr": 0.16667,
+        "impressions": 6,
+        "position": 7.67
+      },
+      {
+        "clicks": 1,
+        "country": "fra",
+        "ctr": 0.125,
+        "impressions": 8,
+        "position": 3.75
+      },
+      {
+        "clicks": 1,
+        "country": "mne",
+        "ctr": 0.06667,
+        "impressions": 15,
+        "position": 5.13
+      },
+      {
+        "clicks": 0,
+        "country": "bra",
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 48.0
+      },
+      {
+        "clicks": 0,
+        "country": "can",
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 6.67
+      },
+      {
+        "clicks": 0,
+        "country": "che",
+        "ctr": 0.0,
+        "impressions": 6,
+        "position": 5.67
+      },
+      {
+        "clicks": 0,
+        "country": "col",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0
+      },
+      {
+        "clicks": 0,
+        "country": "cyp",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 1.0
+      },
+      {
+        "clicks": 0,
+        "country": "cze",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 7.0
+      },
+      {
+        "clicks": 0,
+        "country": "dnk",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 1.0
+      },
+      {
+        "clicks": 0,
+        "country": "egy",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0
+      },
+      {
+        "clicks": 0,
+        "country": "gbr",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 9.0
+      },
+      {
+        "clicks": 0,
+        "country": "grc",
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 4.0
+      },
+      {
+        "clicks": 0,
+        "country": "hrv",
+        "ctr": 0.0,
+        "impressions": 40,
+        "position": 3.48
+      },
+      {
+        "clicks": 0,
+        "country": "hun",
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 2.0
+      },
+      {
+        "clicks": 0,
+        "country": "irl",
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 2.25
+      },
+      {
+        "clicks": 0,
+        "country": "isr",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 5.0
+      },
+      {
+        "clicks": 0,
+        "country": "ita",
+        "ctr": 0.0,
+        "impressions": 5,
+        "position": 6.8
+      },
+      {
+        "clicks": 0,
+        "country": "jpn",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 11.0
+      },
+      {
+        "clicks": 0,
+        "country": "lbn",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 8.0
+      },
+      {
+        "clicks": 0,
+        "country": "mex",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 10.0
+      },
+      {
+        "clicks": 0,
+        "country": "mkd",
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 7.75
+      },
+      {
+        "clicks": 0,
+        "country": "nga",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0
+      },
+      {
+        "clicks": 0,
+        "country": "nld",
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 5.5
+      },
+      {
+        "clicks": 0,
+        "country": "nor",
+        "ctr": 0.0,
+        "impressions": 6,
+        "position": 7.67
+      },
+      {
+        "clicks": 0,
+        "country": "rus",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 7.0
+      },
+      {
+        "clicks": 0,
+        "country": "svk",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 9.0
+      },
+      {
+        "clicks": 0,
+        "country": "svn",
+        "ctr": 0.0,
+        "impressions": 8,
+        "position": 4.62
+      },
+      {
+        "clicks": 0,
+        "country": "usa",
+        "ctr": 0.0,
+        "impressions": 14,
+        "position": 3.14
+      },
+      {
+        "clicks": 0,
+        "country": "xkk",
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 3.5
+      },
+      {
+        "clicks": 0,
+        "country": "zaf",
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 1.0
+      }
+    ],
+    "current_window": {
+      "end": "2026-10-25",
+      "start": "2026-09-28"
+    },
+    "devices": [
+      {
+        "clicks": 125,
+        "ctr": 0.03939,
+        "device": "MOBILE",
+        "impressions": 3173,
+        "position": 5.62
+      },
+      {
+        "clicks": 12,
+        "ctr": 0.04138,
+        "device": "DESKTOP",
+        "impressions": 290,
+        "position": 8.89
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.09091,
+        "device": "TABLET",
+        "impressions": 11,
+        "position": 3.64
+      }
+    ],
+    "image_search_totals": {
+      "clicks": 7,
+      "ctr": 0.00483,
+      "impressions": 1448,
+      "position": 33.54
+    },
+    "inspections": [
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecararuma.rs/",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-25T13:33:53Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": null,
+        "url": "https://cvecararuma.rs/",
+        "userCanonical": "https://cvecararuma.rs/",
+        "verdict": "PASS"
+      },
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecararuma.rs/proizvodi",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-25T20:16:51Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": null,
+        "url": "https://cvecararuma.rs/proizvodi",
+        "userCanonical": "https://cvecararuma.rs/proizvodi",
+        "verdict": "PASS"
+      },
+      {
+        "coverageState": "Послата је и индексирана",
+        "googleCanonical": "https://cvecararuma.rs/kategorije",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-27T23:07:46Z",
+        "pageFetchState": "SUCCESSFUL",
+        "robotsTxtState": "ALLOWED",
+        "sitemap": null,
+        "url": "https://cvecararuma.rs/kategorije",
+        "userCanonical": "https://cvecararuma.rs/kategorije",
+        "verdict": "PASS"
+      }
+    ],
+    "keywords": [
+      {
+        "current": {
+          "clicks": 16,
+          "ctr": 0.05442,
+          "impressions": 294,
+          "position": 1.56
+        },
+        "previous": {
+          "clicks": 18,
+          "ctr": 0.05143,
+          "impressions": 350,
+          "position": 1.54
+        },
+        "query": "cvecara ruma"
+      },
+      {
+        "current": {
+          "clicks": 5,
+          "ctr": 0.09804,
+          "impressions": 51,
+          "position": 1.57
+        },
+        "previous": {
+          "clicks": 3,
+          "ctr": 0.0625,
+          "impressions": 48,
+          "position": 1.58
+        },
+        "query": "cvećara ruma"
+      },
+      {
+        "current": {
+          "clicks": 3,
+          "ctr": 0.03704,
+          "impressions": 81,
+          "position": 2.04
+        },
+        "previous": {
+          "clicks": 7,
+          "ctr": 0.07447,
+          "impressions": 94,
+          "position": 1.84
+        },
+        "query": "cvecare ruma"
+      },
+      {
+        "current": {
+          "clicks": 11,
+          "ctr": 0.42308,
+          "impressions": 26,
+          "position": 1.0
+        },
+        "previous": {
+          "clicks": 6,
+          "ctr": 0.375,
+          "impressions": 16,
+          "position": 1.0
+        },
+        "query": "cvecara lotos ruma"
+      },
+      {
+        "current": null,
+        "previous": null,
+        "query": "dostava cveca ruma"
+      }
+    ],
+    "previous_totals": {
+      "clicks": 150,
+      "ctr": 0.04019,
+      "impressions": 3732,
+      "position": 5.83
+    },
+    "previous_weekly_totals": {
+      "clicks": 41,
+      "ctr": 0.04617,
+      "impressions": 888,
+      "position": 5.84
+    },
+    "previous_window": {
+      "end": "2026-09-27",
+      "start": "2026-08-31"
+    },
+    "search_appearances": [
+      {
+        "appearance": "PRODUCT_SNIPPETS",
+        "clicks": 11,
+        "ctr": 0.05729,
+        "impressions": 192,
+        "position": 7.18
+      }
+    ],
+    "source": "Google Search Console API; finalized data; Web search",
+    "top_pages": [
+      {
+        "clicks": 66,
+        "ctr": 0.06274,
+        "impressions": 1052,
+        "position": 4.05,
+        "url": "https://cvecararuma.rs/"
+      },
+      {
+        "clicks": 10,
+        "ctr": 0.01946,
+        "impressions": 514,
+        "position": 1.94,
+        "url": "http://cvecararuma.rs/"
+      },
+      {
+        "clicks": 9,
+        "ctr": 0.05732,
+        "impressions": 157,
+        "position": 7.38,
+        "url": "https://cvecararuma.rs/cvecara-sremska-mitrovica"
+      },
+      {
+        "clicks": 8,
+        "ctr": 0.02388,
+        "impressions": 335,
+        "position": 6.87,
+        "url": "https://cvecararuma.rs/cvecara-indjija"
+      },
+      {
+        "clicks": 7,
+        "ctr": 0.01786,
+        "impressions": 392,
+        "position": 7.0,
+        "url": "https://cvecararuma.rs/cvecara-stara-pazova"
+      },
+      {
+        "clicks": 5,
+        "ctr": 0.02525,
+        "impressions": 198,
+        "position": 6.56,
+        "url": "https://cvecararuma.rs/cvecara-nova-pazova"
+      },
+      {
+        "clicks": 5,
+        "ctr": 0.25,
+        "impressions": 20,
+        "position": 3.8,
+        "url": "https://cvecararuma.rs/kategorije/cvetne-kutije"
+      },
+      {
+        "clicks": 4,
+        "ctr": 0.0354,
+        "impressions": 113,
+        "position": 4.53,
+        "url": "https://cvecararuma.rs/dostava-cveca-ruma"
+      },
+      {
+        "clicks": 4,
+        "ctr": 0.02963,
+        "impressions": 135,
+        "position": 7.67,
+        "url": "https://cvecararuma.rs/dostava-cveca-u-sremu"
+      },
+      {
+        "clicks": 3,
+        "ctr": 0.05,
+        "impressions": 60,
+        "position": 7.22,
+        "url": "https://cvecararuma.rs/cvecara-irig"
+      },
+      {
+        "clicks": 3,
+        "ctr": 0.01408,
+        "impressions": 213,
+        "position": 8.38,
+        "url": "https://cvecararuma.rs/cvecara-sabac"
+      },
+      {
+        "clicks": 3,
+        "ctr": 0.04,
+        "impressions": 75,
+        "position": 5.51,
+        "url": "https://cvecararuma.rs/kategorije/korpe-sa-cvecem"
+      },
+      {
+        "clicks": 3,
+        "ctr": 0.06522,
+        "impressions": 46,
+        "position": 2.98,
+        "url": "https://cvecararuma.rs/kontakt"
+      },
+      {
+        "clicks": 3,
+        "ctr": 0.02857,
+        "impressions": 105,
+        "position": 6.32,
+        "url": "https://cvecararuma.rs/proizvodi"
+      },
+      {
+        "clicks": 2,
+        "ctr": 0.02564,
+        "impressions": 78,
+        "position": 5.97,
+        "url": "https://cvecararuma.rs/kategorije"
+      },
+      {
+        "clicks": 2,
+        "ctr": 0.11765,
+        "impressions": 17,
+        "position": 10.53,
+        "url": "https://cvecararuma.rs/kategorije/pokloni-uz-cvece"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.00355,
+        "impressions": 282,
+        "position": 5.37,
+        "url": "https://cvecararuma.rs/cvecara-ruma"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.00633,
+        "impressions": 158,
+        "position": 9.36,
+        "url": "https://cvecararuma.rs/kategorije/buketi"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.33333,
+        "impressions": 3,
+        "position": 1.67,
+        "url": "https://cvecararuma.rs/kategorije/cvece-za-vencanje"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.03226,
+        "impressions": 31,
+        "position": 6.16,
+        "url": "https://cvecararuma.rs/kategorije/ruze"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.07692,
+        "impressions": 13,
+        "position": 4.31,
+        "url": "https://cvecararuma.rs/kategorije/saucesce"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.03846,
+        "impressions": 26,
+        "position": 3.69,
+        "url": "https://cvecararuma.rs/proizvodi/buket-saucesce-beli-mir"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 49,
+        "position": 9.51,
+        "url": "https://cvecararuma.rs/cvecara-beograd"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 70,
+        "position": 8.71,
+        "url": "https://cvecararuma.rs/dostava"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 7,
+        "position": 6.43,
+        "url": "https://cvecararuma.rs/faq"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 91,
+        "position": 10.34,
+        "url": "https://cvecararuma.rs/kako-do-nas"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 2.67,
+        "url": "https://cvecararuma.rs/kategorije/cvece-za-rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 11.5,
+        "url": "https://cvecararuma.rs/kategorije/cvece-za-slavu"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 16,
+        "position": 7.25,
+        "url": "https://cvecararuma.rs/kategorije/poslovni-pokloni"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 73,
+        "position": 8.47,
+        "url": "https://cvecararuma.rs/o-nama"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 9,
+        "position": 3.67,
+        "url": "https://cvecararuma.rs/politika-privatnosti"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 5,
+        "position": 6.6,
+        "url": "https://cvecararuma.rs/prilike"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 6.25,
+        "url": "https://cvecararuma.rs/prilike/saucesce"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 5.0,
+        "url": "https://cvecararuma.rs/proizvodi/aranzman-tihi-pozdrav"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 5.0,
+        "url": "https://cvecararuma.rs/proizvodi/buket-baloni-i-cvece"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 12,
+        "position": 4.58,
+        "url": "https://cvecararuma.rs/proizvodi/buket-hvala-za-saradnju"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 5.67,
+        "url": "https://cvecararuma.rs/proizvodi/buket-saucesce-krem"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 5,
+        "position": 13.2,
+        "url": "https://cvecararuma.rs/proizvodi/buket-sunce-za-rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 53,
+        "position": 3.87,
+        "url": "https://cvecararuma.rs/proizvodi/buket-za-mamu-neznost"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 20,
+        "position": 4.5,
+        "url": "https://cvecararuma.rs/proizvodi/buket-zlatni-jubilej"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 6,
+        "position": 6.0,
+        "url": "https://cvecararuma.rs/proizvodi/crvene-ruze-ljubav"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 8,
+        "position": 5.38,
+        "url": "https://cvecararuma.rs/proizvodi/elegantna-korpa-neznosti"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 4.75,
+        "url": "https://cvecararuma.rs/proizvodi/godisnjica-classic-red"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 10.0,
+        "url": "https://cvecararuma.rs/proizvodi/korpa-saucesce"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 10,
+        "position": 1.8,
+        "url": "https://cvecararuma.rs/proizvodi/kraljevska-crvena-elegancija"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 29,
+        "position": 7.59,
+        "url": "https://cvecararuma.rs/proizvodi/kutija-srce-od-ruza"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 49,
+        "position": 7.53,
+        "url": "https://cvecararuma.rs/proizvodi/orhideja-i-ruze-premium"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 18,
+        "position": 4.72,
+        "url": "https://cvecararuma.rs/proizvodi/pastelna-bajka-buket"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 10,
+        "position": 5.0,
+        "url": "https://cvecararuma.rs/proizvodi/poslovni-buket-prestige"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 32,
+        "position": 6.28,
+        "url": "https://cvecararuma.rs/proizvodi/premium-25-ruza"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 5,
+        "position": 6.6,
+        "url": "https://cvecararuma.rs/proizvodi/premium-kutija-vecna-ljubav"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 16,
+        "position": 5.81,
+        "url": "https://cvecararuma.rs/proizvodi/premium-ruze-za-rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 16,
+        "position": 7.19,
+        "url": "https://cvecararuma.rs/proizvodi/rodjendanska-kutija-pastel-deluxe"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 10.0,
+        "url": "https://cvecararuma.rs/proizvodi/rusticna-godisnjica"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 7,
+        "position": 6.14,
+        "url": "https://cvecararuma.rs/proizvodi/sareni-rodjendanski-miks"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "url": "https://cvecararuma.rs/proizvodi/venac-dostojanstvo"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 4.75,
+        "url": "https://cvecararuma.rs/proizvodi/venac-premium-beli"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "url": "https://cvecararuma.rs/uslovi-koriscenja"
+      }
+    ],
+    "top_queries": [
+      {
+        "clicks": 16,
+        "ctr": 0.05442,
+        "impressions": 294,
+        "position": 1.56,
+        "query": "cvecara ruma"
+      },
+      {
+        "clicks": 11,
+        "ctr": 0.42308,
+        "impressions": 26,
+        "position": 1.0,
+        "query": "cvecara lotos ruma"
+      },
+      {
+        "clicks": 5,
+        "ctr": 0.09804,
+        "impressions": 51,
+        "position": 1.57,
+        "query": "cvećara ruma"
+      },
+      {
+        "clicks": 3,
+        "ctr": 0.03704,
+        "impressions": 81,
+        "position": 2.04,
+        "query": "cvecare ruma"
+      },
+      {
+        "clicks": 2,
+        "ctr": 0.01205,
+        "impressions": 166,
+        "position": 6.74,
+        "query": "cvecara indjija"
+      },
+      {
+        "clicks": 2,
+        "ctr": 0.03774,
+        "impressions": 53,
+        "position": 5.38,
+        "query": "cvecara lotos"
+      },
+      {
+        "clicks": 2,
+        "ctr": 0.02062,
+        "impressions": 97,
+        "position": 6.87,
+        "query": "cvecara nova pazova"
+      },
+      {
+        "clicks": 2,
+        "ctr": 0.16667,
+        "impressions": 12,
+        "position": 1.5,
+        "query": "ruma cvecara"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.05882,
+        "impressions": 17,
+        "position": 5.59,
+        "query": "cvecara"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.05556,
+        "impressions": 18,
+        "position": 7.5,
+        "query": "cvecara irig"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.03125,
+        "impressions": 32,
+        "position": 2.88,
+        "query": "cvecara ruma radno vreme"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.02857,
+        "impressions": 35,
+        "position": 6.83,
+        "query": "cvecare stara pazova"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.02632,
+        "impressions": 38,
+        "position": 6.84,
+        "query": "cvećara stara pazova"
+      },
+      {
+        "clicks": 1,
+        "ctr": 0.33333,
+        "impressions": 3,
+        "position": 9.67,
+        "query": "sabac cvecara"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 1.0,
+        "query": "a u rumi"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 11.0,
+        "query": "baloni ruma"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 4.0,
+        "query": "beli buket"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 9,
+        "position": 18.44,
+        "query": "buket"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "query": "buket cveca za rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 18,
+        "position": 1.94,
+        "query": "buket za mamu"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 13.5,
+        "query": "buket za rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 16,
+        "position": 27.69,
+        "query": "buketi"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 2.0,
+        "query": "buketi cveća za rođendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 5.0,
+        "query": "cactus store"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "query": "cene"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 8,
+        "position": 1.0,
+        "query": "crvena zona ruma"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 15.0,
+        "query": "cvecara beograd"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 49.0,
+        "query": "cvecara beograd dostava"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 12.0,
+        "query": "cvecara borska"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 83.0,
+        "query": "cvecara dostava"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 9.5,
+        "query": "cvecara indjija radno vreme"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 17.0,
+        "query": "cvecara kazablanka beograd"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 7.0,
+        "query": "cvecara lotos sabac"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 14,
+        "position": 5.64,
+        "query": "cvecara lotus"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 8,
+        "position": 4.0,
+        "query": "cvecara near me"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 1.0,
+        "query": "cvecara orhideja"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 8.0,
+        "query": "cvecara orhideja ruma"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 7.0,
+        "query": "cvecara palcica indjija"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 6.0,
+        "query": "cvecara premium"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 10.0,
+        "query": "cvecara ruza sremska mitrovica"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 7,
+        "position": 11.43,
+        "query": "cvecara sabac"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 6,
+        "position": 9.67,
+        "query": "cvecara sabac dostava"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 16,
+        "position": 9.94,
+        "query": "cvecara sremska mitrovica"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 160,
+        "position": 6.92,
+        "query": "cvecara stara pazova"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0,
+        "query": "cvecara u blizini"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 9.0,
+        "query": "cvecara vojka"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 9,
+        "position": 9.22,
+        "query": "cvecara vrdnik"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 2.33,
+        "query": "cvecare"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 30,
+        "position": 7.63,
+        "query": "cvecare indjija"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 4.5,
+        "query": "cvecare sabac"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 22.5,
+        "query": "cvecare sabac radno vreme"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 8.0,
+        "query": "cvecare sremska mitrovica"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 11.0,
+        "query": "cvecare vojvode stepe"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 26.0,
+        "query": "cvece i baloni"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 10.0,
+        "query": "cvece za slavu"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 3.0,
+        "query": "cvecra"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 23.0,
+        "query": "cvećara"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 9,
+        "position": 6.11,
+        "query": "cvećara inđija"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 9,
+        "position": 5.22,
+        "query": "cvećara lotos"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 7.5,
+        "query": "cvećara near me"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 7.0,
+        "query": "cvećara nova pazova"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 11.0,
+        "query": "cvećara sremska mitrovica"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 11.0,
+        "query": "cvećara šabac"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 15,
+        "position": 1.87,
+        "query": "cvećare ruma"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 10.0,
+        "query": "da li moze slika"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 11.0,
+        "query": "da,moze"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0,
+        "query": "daj mi slike tih"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 5.0,
+        "query": "dostava cveca"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 60.0,
+        "query": "dostava cveća beograd"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 4.0,
+        "query": "flower bouquet"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0,
+        "query": "gde ima u sapcu"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 19.0,
+        "query": "koliko košta"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 4.67,
+        "query": "korpa sa cvecem"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 3.5,
+        "query": "korpe sa cvecem"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 1.0,
+        "query": "korpe sa cvecem za rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 4,
+        "position": 5.75,
+        "query": "korpe sa cvećem slike"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0,
+        "query": "korpica sa cvecem"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 6.0,
+        "query": "korpice sa cvećem"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 6.0,
+        "query": "lotos"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 55,
+        "position": 5.25,
+        "query": "lotos cvecara"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 16,
+        "position": 5.5,
+        "query": "lotus cvecara"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 8.0,
+        "query": "moze slika"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 27.0,
+        "query": "moze slike"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 15.0,
+        "query": "mozes li sliku"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 24.0,
+        "query": "na mojoj slici"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0,
+        "query": "online poručivanje"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 13,
+        "position": 9.92,
+        "query": "orhideja ruma"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "query": "pletene korpe"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "query": "poklon korpe sa cvecem"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 16.0,
+        "query": "prazna kutija"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 9.0,
+        "query": "rodjendanski buketi"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "query": "rose flower bouquet"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 5.0,
+        "query": "rose flower bouquet price"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 1.0,
+        "query": "rođendanski buketi"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 11.5,
+        "query": "rođendanski buketi cvijeće za rođendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 4.0,
+        "query": "ruze"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 3.0,
+        "query": "ruze za rodjendan"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 3,
+        "position": 1.0,
+        "query": "ruze za rodjendan slike"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 17.0,
+        "query": "shops open near me"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 1,
+        "position": 2.0,
+        "query": "slika"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 90.5,
+        "query": "букет"
+      },
+      {
+        "clicks": 0,
+        "ctr": 0.0,
+        "impressions": 2,
+        "position": 13.0,
+        "query": "цвећара"
+      }
+    ],
+    "totals": {
+      "clicks": 138,
+      "ctr": 0.03972,
+      "impressions": 3474,
+      "position": 5.88
+    },
+    "weekly_totals": {
+      "clicks": 30,
+      "ctr": 0.04027,
+      "impressions": 745,
+      "position": 5.66
+    },
+    "weekly_window": {
+      "end": "2026-10-25",
+      "start": "2026-10-19"
+    }
+  },
+  "monitor_date": "2026-10-28",
+  "schema_version": 2,
+  "site_id": "ruma"
+}
