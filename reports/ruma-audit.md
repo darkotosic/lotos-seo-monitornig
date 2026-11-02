@@ -1,6 +1,6 @@
 # Nedeljni SEO audit — Cvećara Lotos Ruma
 
-Domen: https://cvecararuma.rs  |  Datum: 2026-10-26
+Domen: https://cvecararuma.rs  |  Datum: 2026-11-02
 
 ## Obuhvat
 
@@ -80,7 +80,6 @@ Domen: https://cvecararuma.rs  |  Datum: 2026-10-26
 - **P1** — cvecara indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — cvecara stara pazova: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — http://cvecararuma.rs/: Visoka pozicija uz nizak CTR: proveriti stvarni SERP, naslov i snippet
-- **P1** — https://cvecararuma.rs/: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/cvecara-indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/cvecara-nova-pazova: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/cvecara-ruma: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
@@ -89,6 +88,7 @@ Domen: https://cvecararuma.rs  |  Datum: 2026-10-26
 - **P1** — https://cvecararuma.rs/cvecara-stara-pazova: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/dostava-cveca-u-sremu: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/kategorije/buketi: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- **P1** — https://cvecararuma.rs/proizvodi: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P2** — https://cvecararuma.rs/cvecara-beograd: ssr_h1_placeholder
 - **P2** — https://cvecararuma.rs/cvecara-indjija: ssr_h1_placeholder
 - **P2** — https://cvecararuma.rs/cvecara-irig: ssr_h1_placeholder

@@ -1,6 +1,6 @@
 # Nedeljni SEO audit — Cvećara Inđija — Lotos
 
-Domen: https://cvecaraindjija.rs  |  Datum: 2026-10-26
+Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-02
 
 ## Obuhvat
 
@@ -78,9 +78,9 @@ Domen: https://cvecaraindjija.rs  |  Datum: 2026-10-26
 ## Predlog ručnih SEO zadataka
 
 - **P1** — cvecara indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- **P1** — cvecara indjija radno vreme: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — cvecare indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
+- **P1** — https://cvecaraindjija.rs/dostava: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/kako-do-nas: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/kontakt: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/proizvodi: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
