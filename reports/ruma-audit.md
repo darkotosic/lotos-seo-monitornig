@@ -1,6 +1,6 @@
 # Nedeljni SEO audit — Cvećara Lotos Ruma
 
-Domen: https://cvecararuma.rs  |  Datum: 2026-11-02
+Domen: https://cvecararuma.rs  |  Datum: 2026-11-09
 
 ## Obuhvat
 
@@ -77,9 +77,9 @@ Domen: https://cvecararuma.rs  |  Datum: 2026-11-02
 
 ## Predlog ručnih SEO zadataka
 
-- **P1** — cvecara indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — cvecara stara pazova: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — http://cvecararuma.rs/: Visoka pozicija uz nizak CTR: proveriti stvarni SERP, naslov i snippet
+- **P1** — https://cvecararuma.rs/: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/cvecara-indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/cvecara-nova-pazova: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecararuma.rs/cvecara-ruma: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove

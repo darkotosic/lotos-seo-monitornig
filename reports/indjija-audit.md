@@ -1,6 +1,6 @@
 # Nedeljni SEO audit — Cvećara Inđija — Lotos
 
-Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-02
+Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-09
 
 ## Obuhvat
 
@@ -61,8 +61,8 @@ Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-02
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/proizvodi/aranzman-poslednji-pozdrav |
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/proizvodi/poslovni-buket-prestige |
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/proizvodi/buket-hvala-za-saradnju |
-| P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/kategorije/cvece-za-vencanje |
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece |
+| P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/kategorije/poslovni-pokloni |
 
 ## Unutrašnji linkovi
 
@@ -78,7 +78,6 @@ Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-02
 ## Predlog ručnih SEO zadataka
 
 - **P1** — cvecara indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- **P1** — cvecare indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/dostava: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/kako-do-nas: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
@@ -92,6 +91,7 @@ Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-02
 - **P1** — https://cvecaraindjija.rs/kategorije/korpe-sa-cvecem: wrong_delivery_city
 - **P1** — https://cvecaraindjija.rs/kategorije/ruze: wrong_delivery_city
 - **P1** — https://cvecaraindjija.rs/kategorije/saucesce: wrong_delivery_city
+- **P1** — https://cvecaraindjija.rs/prilike/dan-zaljubljenih: wrong_delivery_city
 
 ## Tehnička upozorenja
 
