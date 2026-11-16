@@ -1,6 +1,6 @@
 # Nedeljni SEO audit — Cvećara Lotos Ruma
 
-Domen: https://cvecararuma.rs  |  Datum: 2026-11-09
+Domen: https://cvecararuma.rs  |  Datum: 2026-11-16
 
 ## Obuhvat
 

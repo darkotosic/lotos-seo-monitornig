@@ -1,10 +1,10 @@
-LOTOS SEO | NEDELJNI AUDIT | 2026-11-09
+LOTOS SEO | NEDELJNI AUDIT | 2026-11-16
 Stvarni tehnički nalazi; preporuke zahtevaju ljudsku proveru.
 
 Cvećara Lotos Ruma
 Sitemap: 87 URL-ova
 Crawler: 80/80 HTTP 200
-Content/schema/image nalaza: 120
+Content/schema/image nalaza: 117
 PageSpeed: 0 uspešnih merenja
 
 Cvećara Inđija — Lotos

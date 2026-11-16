@@ -1,6 +1,6 @@
 # Nedeljni SEO audit — Cvećara Inđija — Lotos
 
-Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-09
+Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-16
 
 ## Obuhvat
 
@@ -78,9 +78,6 @@ Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-09
 ## Predlog ručnih SEO zadataka
 
 - **P1** — cvecara indjija: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- **P1** — https://cvecaraindjija.rs/: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- **P1** — https://cvecaraindjija.rs/dostava: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
-- **P1** — https://cvecaraindjija.rs/kako-do-nas: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/kontakt: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/proizvodi: Pozicija 4–15: proveriti nameru pretrage, sadržaj i interne linkove
 - **P1** — https://cvecaraindjija.rs/kategorije/buketi: wrong_delivery_city
@@ -92,6 +89,9 @@ Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-09
 - **P1** — https://cvecaraindjija.rs/kategorije/ruze: wrong_delivery_city
 - **P1** — https://cvecaraindjija.rs/kategorije/saucesce: wrong_delivery_city
 - **P1** — https://cvecaraindjija.rs/prilike/dan-zaljubljenih: wrong_delivery_city
+- **P1** — https://cvecaraindjija.rs/prilike/godisnjica: wrong_delivery_city
+- **P1** — https://cvecaraindjija.rs/prilike/izvinjenje: wrong_delivery_city
+- **P1** — https://cvecaraindjija.rs/prilike/osmi-mart: wrong_delivery_city
 
 ## Tehnička upozorenja
 
