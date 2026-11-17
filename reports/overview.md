@@ -2,7 +2,7 @@
 
 | Domen | Klikovi (28d) | Prikazi (28d) | CTR | Pozicija | Upozorenja |
 |---|---:|---:|---:|---:|---:|
-| https://cvecararuma.rs | 91 | 3032 | 3.0% | 6.0 | 0 |
-| https://cvecaraindjija.rs | 47 | 603 | 7.8% | 6.4 | 0 |
+| https://cvecararuma.rs | 92 | 3020 | 3.0% | 6.1 | 0 |
+| https://cvecaraindjija.rs | 49 | 627 | 7.8% | 6.6 | 0 |
 
 Period: poslednjih 28 finalizovanih dana zaključno sa datumom prikazanim u pojedinačnim izveštajima.
