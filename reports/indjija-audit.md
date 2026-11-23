@@ -1,6 +1,6 @@
 # Nedeljni SEO audit — Cvećara Inđija — Lotos
 
-Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-16
+Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-23
 
 ## Obuhvat
 
@@ -61,8 +61,8 @@ Domen: https://cvecaraindjija.rs  |  Datum: 2026-11-16
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/proizvodi/aranzman-poslednji-pozdrav |
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/proizvodi/poslovni-buket-prestige |
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/proizvodi/buket-hvala-za-saradnju |
+| P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/kategorije/cvece-za-vencanje |
 | P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/kategorije/pokloni-uz-cvece |
-| P2 | ssr_h1_placeholder | https://cvecaraindjija.rs/kategorije/poslovni-pokloni |
 
 ## Unutrašnji linkovi
 
